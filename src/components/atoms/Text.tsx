@@ -33,13 +33,27 @@ const Text: React.FC<TextProps> = ({
   
   const classes = `${variants[variant]} ${colors[color]} ${className}`;
   
-  const Component = variant.startsWith('h') ? variant as keyof JSX.IntrinsicElements : 'p';
+  // Renderizar elementos HTML directamente
+  if (variant === 'h1') {
+    return <h1 className={classes}>{children}</h1>;
+  }
+  if (variant === 'h2') {
+    return <h2 className={classes}>{children}</h2>;
+  }
+  if (variant === 'h3') {
+    return <h3 className={classes}>{children}</h3>;
+  }
+  if (variant === 'h4') {
+    return <h4 className={classes}>{children}</h4>;
+  }
+  if (variant === 'label') {
+    return <label className={classes}>{children}</label>;
+  }
+  if (variant === 'caption') {
+    return <p className={classes}>{children}</p>;
+  }
   
-  return (
-    <Component className={classes}>
-      {children}
-    </Component>
-  );
+  return <p className={classes}>{children}</p>;
 };
 
 export default Text; 

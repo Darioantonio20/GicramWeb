@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Input, Text } from '../atoms';
+import { Button, Input } from '../atoms';
 
 interface ContactFormProps {
   onSubmit?: (data: ContactFormData) => void;
@@ -29,7 +29,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   const [errors, setErrors] = useState<Partial<ContactFormData>>({});
 
   const handleChange = (field: keyof ContactFormData) => (
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData(prev => ({
       ...prev,
@@ -115,7 +115,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         </label>
         <textarea
           value={formData.message}
-          onChange={(e) => handleChange('message')(e as any)}
+          onChange={handleChange('message')}
           className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:border-yellow-500"
           rows={4}
           placeholder="Cuéntanos sobre tu proyecto..."
@@ -125,7 +125,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         )}
       </div>
       
-      <Button type="submit" className="w-full">
+      <Button className="w-full">
         Enviar Mensaje
       </Button>
     </form>
