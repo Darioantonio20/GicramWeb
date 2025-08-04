@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '../atoms';
+import { Text, PhoneIcon, EmailIcon, LocationIcon, ClockIcon, ConstructionIcon } from '../atoms';
 import { ContactForm } from '../molecules';
 
 const Contact: React.FC = () => {
@@ -10,76 +10,118 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <section id="contact" className="py-24 bg-gray-50 relative overflow-hidden">
+      {/* Elegant Background Elements */}
+      <div className="absolute inset-0">
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 opacity-3">
+          <div className="absolute top-0 left-0 w-full h-full construction-grid"></div>
+        </div>
+        
+        {/* Elegant Floating Elements */}
+        <div className="absolute top-20 right-20 w-32 h-32 bg-black/5 rounded-full animate-construction-float">
+          <ConstructionIcon size="xl" className="text-black/20 mx-auto mt-8" />
+        </div>
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-black/5 rounded-full animate-construction-float animation-delay-2000">
+          <ConstructionIcon size="lg" className="text-black/20 mx-auto mt-6" />
+        </div>
+        <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-black/5 rounded-full animate-construction-float animation-delay-1000">
+          <ConstructionIcon size="xl" className="text-black/20 mx-auto mt-10" />
+        </div>
+        <div className="absolute bottom-1/3 left-1/4 w-28 h-28 bg-black/5 rounded-full animate-construction-float animation-delay-3000">
+          <ConstructionIcon size="lg" className="text-black/20 mx-auto mt-7" />
+        </div>
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Contact Information */}
-          <div>
-            <Text variant="h2" className="mb-6">
-              Contáctanos
-            </Text>
-            <Text variant="body" color="secondary" className="mb-8">
-              ¿Tienes un proyecto en mente? Nuestro equipo está listo para ayudarte 
-              a encontrar la maquinaria perfecta para tu proyecto.
-            </Text>
-
+          <div className="space-y-8">
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">📞</span>
+              <div className="inline-flex items-center px-6 py-3 bg-black/10 backdrop-blur-sm rounded-full text-black text-sm font-semibold mb-8 border border-black/20 shadow-lg">
+                <span className="w-2 h-2 bg-black rounded-full mr-3 animate-pulse"></span>
+                Contáctanos
+              </div>
+              
+              <Text variant="h2" className="mb-8 text-black">
+                ¿Tienes un proyecto en mente?
+              </Text>
+              
+              <Text variant="body" color="secondary" className="text-lg leading-relaxed text-gray-600">
+                Nuestro equipo está listo para ayudarte a encontrar la maquinaria perfecta para tu proyecto. 
+                Contáctanos y te responderemos en menos de 24 horas.
+              </Text>
+            </div>
+
+            <div className="space-y-8">
+              <div className="flex items-start space-x-6 group">
+                <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
+                  <PhoneIcon size="lg" className="text-white" />
                 </div>
                 <div>
-                  <Text variant="h4" className="mb-1">
+                  <Text variant="h4" className="mb-2 font-bold text-black">
                     Teléfono
                   </Text>
-                  <Text variant="body" color="secondary">
+                  <Text variant="body" color="secondary" className="text-lg text-gray-600">
                     +52 (55) 1234-5678
                   </Text>
+                  <Text variant="caption" color="gray" className="text-gray-500">
+                    Línea directa 24/7
+                  </Text>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">📧</span>
+              <div className="flex items-start space-x-6 group">
+                <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
+                  <EmailIcon size="lg" className="text-white" />
                 </div>
                 <div>
-                  <Text variant="h4" className="mb-1">
+                  <Text variant="h4" className="mb-2 font-bold text-black">
                     Email
                   </Text>
-                  <Text variant="body" color="secondary">
+                  <Text variant="body" color="secondary" className="text-lg text-gray-600">
                     info@gicram.com
+                  </Text>
+                  <Text variant="caption" color="gray" className="text-gray-500">
+                    Respuesta en 2 horas
                   </Text>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">📍</span>
+              <div className="flex items-start space-x-6 group">
+                <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
+                  <LocationIcon size="lg" className="text-white" />
                 </div>
                 <div>
-                  <Text variant="h4" className="mb-1">
+                  <Text variant="h4" className="mb-2 font-bold text-black">
                     Dirección
                   </Text>
-                  <Text variant="body" color="secondary">
+                  <Text variant="body" color="secondary" className="text-lg text-gray-600">
                     Av. Industrial 123<br />
                     Col. Industrial<br />
                     Ciudad de México, CDMX
                   </Text>
+                  <Text variant="caption" color="gray" className="text-gray-500">
+                    Visítanos en horario laboral
+                  </Text>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">🕒</span>
+              <div className="flex items-start space-x-6 group">
+                <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
+                  <ClockIcon size="lg" className="text-white" />
                 </div>
                 <div>
-                  <Text variant="h4" className="mb-1">
+                  <Text variant="h4" className="mb-2 font-bold text-black">
                     Horarios
                   </Text>
-                  <Text variant="body" color="secondary">
+                  <Text variant="body" color="secondary" className="text-lg text-gray-600">
                     Lunes - Viernes: 8:00 AM - 6:00 PM<br />
                     Sábados: 9:00 AM - 2:00 PM<br />
                     Emergencias: 24/7
+                  </Text>
+                  <Text variant="caption" color="gray" className="text-gray-500">
+                    Servicio de emergencia disponible
                   </Text>
                 </div>
               </div>
@@ -87,11 +129,27 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <Text variant="h3" className="mb-6">
-              Solicita una Cotización
-            </Text>
-            <ContactForm onSubmit={handleSubmit} />
+          <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 relative overflow-hidden border border-gray-200">
+            {/* Elegant Background Pattern */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-black/5 rounded-lg opacity-30 transform rotate-45"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-black/5 rounded-lg opacity-30 transform -rotate-45"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-black/10 rounded-lg opacity-20 animate-machinery-vibrate"></div>
+            
+            <div className="relative">
+              <div className="text-center mb-8">
+                <div className="text-4xl mb-4">
+                  <ConstructionIcon size="xl" className="text-black mx-auto" />
+                </div>
+                <Text variant="h3" className="mb-4 text-black">
+                  Solicita una Cotización
+                </Text>
+                <Text variant="body" color="secondary" className="text-gray-600">
+                  Completa el formulario y te contactaremos en menos de 24 horas
+                </Text>
+              </div>
+              
+              <ContactForm onSubmit={handleSubmit} />
+            </div>
           </div>
         </div>
       </div>
