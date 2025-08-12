@@ -110,22 +110,22 @@ const ContactForm: React.FC<ContactFormProps> = ({
       </div>
       
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          Mensaje <span className="text-red-500">*</span>
+        <label className="block text-sm font-medium text-[#6D3434] mb-2">
+          Mensaje <span className="text-[#E4412E]">*</span>
         </label>
         <textarea
           value={formData.message}
           onChange={handleChange('message')}
-          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:border-yellow-500"
+          className="w-full px-4 py-3 border-2 border-[#6D3434]/30 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#E4412E] focus:ring-offset-2 focus:border-[#E4412E]"
           rows={4}
           placeholder="Cuéntanos sobre tu proyecto..."
         />
         {errors.message && (
-          <p className="text-sm text-red-600 mt-1">{errors.message}</p>
+          <p className="text-sm text-[#E4412E] mt-1">{errors.message}</p>
         )}
       </div>
       
-      <Button className="w-full">
+      <Button className="w-full bg-[#E4412E] hover:bg-[#6D3434] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
         Enviar Mensaje
       </Button>
     </form>

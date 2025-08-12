@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 via-white to-[#6D3434]/5 relative overflow-hidden">
       {/* Elegant Background Elements */}
       <div className="absolute inset-0">
         {/* Subtle Grid Pattern */}
@@ -19,17 +19,17 @@ const Contact: React.FC = () => {
         </div>
         
         {/* Elegant Floating Elements */}
-        <div className="absolute top-20 right-20 w-32 h-32 bg-black/5 rounded-full animate-construction-float">
-          <ConstructionIcon size="xl" className="text-black/20 mx-auto mt-8" />
+        <div className="absolute top-20 right-20 w-32 h-32 bg-[#E4412E]/5 rounded-full animate-construction-float">
+          <ConstructionIcon size="xl" className="text-[#E4412E]/20 mx-auto mt-8" />
         </div>
-        <div className="absolute bottom-20 left-20 w-24 h-24 bg-black/5 rounded-full animate-construction-float animation-delay-2000">
-          <ConstructionIcon size="lg" className="text-black/20 mx-auto mt-6" />
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-[#6D3434]/5 rounded-full animate-construction-float animation-delay-2000">
+          <ConstructionIcon size="lg" className="text-[#6D3434]/20 mx-auto mt-6" />
         </div>
-        <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-black/5 rounded-full animate-construction-float animation-delay-1000">
-          <ConstructionIcon size="xl" className="text-black/20 mx-auto mt-10" />
+        <div className="absolute top-1/2 right-1/4 w-40 h-40 bg-[#E4412E]/5 rounded-full animate-construction-float animation-delay-1000">
+          <ConstructionIcon size="xl" className="text-[#E4412E]/20 mx-auto mt-10" />
         </div>
-        <div className="absolute bottom-1/3 left-1/4 w-28 h-28 bg-black/5 rounded-full animate-construction-float animation-delay-3000">
-          <ConstructionIcon size="lg" className="text-black/20 mx-auto mt-7" />
+        <div className="absolute bottom-1/3 left-1/4 w-28 h-28 bg-[#6D3434]/5 rounded-full animate-construction-float animation-delay-3000">
+          <ConstructionIcon size="lg" className="text-[#6D3434]/20 mx-auto mt-7" />
         </div>
       </div>
       
@@ -38,31 +38,31 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <div className="inline-flex items-center px-6 py-3 bg-black/10 backdrop-blur-sm rounded-full text-black text-sm font-semibold mb-8 border border-black/20 shadow-lg">
-                <span className="w-2 h-2 bg-black rounded-full mr-3 animate-pulse"></span>
+              <div className="inline-flex items-center px-6 py-3 bg-[#E4412E]/10 backdrop-blur-sm rounded-full text-[#6D3434] text-sm font-semibold mb-8 border border-[#E4412E]/20 shadow-lg">
+                <span className="w-2 h-2 bg-[#E4412E] rounded-full mr-3 animate-pulse"></span>
                 Contáctanos
               </div>
               
-              <Text variant="h2" className="mb-8 text-black">
+              <Text variant="h2" className="mb-8 text-slate-800">
                 ¿Tienes un proyecto en mente?
               </Text>
               
-              <Text variant="body" color="secondary" className="text-lg leading-relaxed text-gray-600">
-                Nuestro equipo está listo para ayudarte a encontrar la maquinaria perfecta para tu proyecto. 
+              <Text variant="body" color="secondary" className="text-lg leading-relaxed text-slate-600">
+                Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu proyecto. 
                 Contáctanos y te responderemos en menos de 24 horas.
               </Text>
             </div>
 
             <div className="space-y-8">
               <div className="flex items-start space-x-6 group">
-                <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
+                <div className="w-16 h-16 bg-[#6D3434] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
                   <PhoneIcon size="lg" className="text-white" />
                 </div>
                 <div>
-                  <Text variant="h4" className="mb-2 font-bold text-black">
+                  <Text variant="h4" className="mb-2 font-bold text-slate-800">
                     Teléfono
                   </Text>
-                  <Text variant="body" color="secondary" className="text-lg text-gray-600">
+                  <Text variant="body" color="secondary" className="text-lg text-slate-600">
                     +52 (55) 1234-5678
                   </Text>
                   <Text variant="caption" color="gray" className="text-gray-500">
@@ -72,14 +72,14 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-6 group">
-                <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
+                <div className="w-16 h-16 bg-[#E4412E] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
                   <EmailIcon size="lg" className="text-white" />
                 </div>
                 <div>
-                  <Text variant="h4" className="mb-2 font-bold text-black">
+                  <Text variant="h4" className="mb-2 font-bold text-slate-800">
                     Email
                   </Text>
-                  <Text variant="body" color="secondary" className="text-lg text-gray-600">
+                  <Text variant="body" color="secondary" className="text-lg text-slate-600">
                     info@gicram.com
                   </Text>
                   <Text variant="caption" color="gray" className="text-gray-500">
@@ -89,14 +89,14 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-6 group">
-                <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
+                <div className="w-16 h-16 bg-[#6D3434] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
                   <LocationIcon size="lg" className="text-white" />
                 </div>
                 <div>
-                  <Text variant="h4" className="mb-2 font-bold text-black">
+                  <Text variant="h4" className="mb-2 font-bold text-slate-800">
                     Dirección
                   </Text>
-                  <Text variant="body" color="secondary" className="text-lg text-gray-600">
+                  <Text variant="body" color="secondary" className="text-lg text-slate-600">
                     Av. Industrial 123<br />
                     Col. Industrial<br />
                     Ciudad de México, CDMX
@@ -108,14 +108,14 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex items-start space-x-6 group">
-                <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
+                <div className="w-16 h-16 bg-[#E4412E] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-construction-pulse">
                   <ClockIcon size="lg" className="text-white" />
                 </div>
                 <div>
-                  <Text variant="h4" className="mb-2 font-bold text-black">
+                  <Text variant="h4" className="mb-2 font-bold text-slate-800">
                     Horarios
                   </Text>
-                  <Text variant="body" color="secondary" className="text-lg text-gray-600">
+                  <Text variant="body" color="secondary" className="text-lg text-slate-600">
                     Lunes - Viernes: 8:00 AM - 6:00 PM<br />
                     Sábados: 9:00 AM - 2:00 PM<br />
                     Emergencias: 24/7
@@ -131,19 +131,19 @@ const Contact: React.FC = () => {
           {/* Contact Form */}
           <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 relative overflow-hidden border border-gray-200">
             {/* Elegant Background Pattern */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-black/5 rounded-lg opacity-30 transform rotate-45"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-black/5 rounded-lg opacity-30 transform -rotate-45"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-black/10 rounded-lg opacity-20 animate-machinery-vibrate"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#E4412E]/5 rounded-lg opacity-30 transform rotate-45"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#6D3434]/5 rounded-lg opacity-30 transform -rotate-45"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-[#E4412E]/10 rounded-lg opacity-20 animate-machinery-vibrate"></div>
             
             <div className="relative">
               <div className="text-center mb-8">
                 <div className="text-4xl mb-4">
-                  <ConstructionIcon size="xl" className="text-black mx-auto" />
+                  <ConstructionIcon size="xl" className="text-[#E4412E] mx-auto" />
                 </div>
-                <Text variant="h3" className="mb-4 text-black">
+                <Text variant="h3" className="mb-4 text-slate-800">
                   Solicita una Cotización
                 </Text>
-                <Text variant="body" color="secondary" className="text-gray-600">
+                <Text variant="body" color="secondary" className="text-slate-600">
                   Completa el formulario y te contactaremos en menos de 24 horas
                 </Text>
               </div>

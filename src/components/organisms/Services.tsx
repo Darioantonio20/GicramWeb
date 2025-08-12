@@ -1,148 +1,244 @@
 import React from 'react';
-import { Text, ExcavatorIcon, ConstructionIcon, BulldozerIcon, CraneIcon, LoaderIcon, CompactorIcon, SearchIcon, PhoneIcon } from '../atoms';
-import { ServiceCard } from '../molecules';
+import { CircularGallery } from '../molecules';
+import { LightbulbIcon, BuildingIcon, HomeIcon } from '../atoms';
 
 const Services: React.FC = () => {
-  const services = [
+  const galleryItems = [
     {
-      title: 'Excavadoras',
-      description: 'Excavadoras de diferentes tamaños para todo tipo de proyectos de excavación.',
-      icon: <ExcavatorIcon size="lg" className="text-black" />,
-      features: ['Capacidad: 1.5 - 35 toneladas', 'Operador incluido', 'Mantenimiento incluido'],
-      price: '$2,500'
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      text: "Construcción"
     },
     {
-      title: 'Retroexcavadoras',
-      description: 'Ideal para trabajos de excavación y carga en espacios reducidos.',
-      icon: <ConstructionIcon size="lg" className="text-black" />,
-      features: ['Versátil y maniobrable', 'Ideal para zanjas', 'Operador experimentado'],
-      price: '$1,800'
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      text: "Remodelación"
     },
     {
-      title: 'Bulldozers',
-      description: 'Potentes bulldozers para nivelación y movimiento de tierra.',
-      icon: <BulldozerIcon size="lg" className="text-black" />,
-      features: ['Alta potencia', 'Nivelación precisa', 'Trabajo en terrenos difíciles'],
-      price: '$3,200'
+      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      text: "Mantenimiento"
     },
     {
-      title: 'Grúas',
-      description: 'Grúas móviles para elevación y transporte de materiales pesados.',
-      icon: <CraneIcon size="lg" className="text-black" />,
-      features: ['Capacidad: 25 - 100 toneladas', 'Certificación vigente', 'Inspección diaria'],
-      price: '$4,500'
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      text: "Consultoría"
     },
     {
-      title: 'Cargadores',
-      description: 'Cargadores frontales para carga y transporte de materiales.',
-      icon: <LoaderIcon size="lg" className="text-black" />,
-      features: ['Carga rápida', 'Manejo de materiales', 'Alta eficiencia'],
-      price: '$2,200'
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      text: "Supervisión"
     },
     {
-      title: 'Compactadores',
-      description: 'Compactadores para compactación de suelos y asfalto.',
-      icon: <CompactorIcon size="lg" className="text-black" />,
-      features: ['Compactación uniforme', 'Vibración ajustable', 'Control de calidad'],
-      price: '$1,500'
+      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      text: "Proyectos"
     }
   ];
 
   return (
-    <section id="services" className="py-24 bg-white relative overflow-hidden">
-      {/* Elegant Background Elements */}
-      <div className="absolute inset-0">
-        {/* Subtle Grid Pattern */}
-        <div className="absolute inset-0 opacity-3">
-          <div className="absolute top-0 left-0 w-full h-full construction-grid"></div>
+    <>
+      {/* Services Section */}
+      <section id="services" className="py-24 bg-gradient-to-br from-white via-gray-50 to-[#6D3434]/10 relative overflow-hidden">
+        {/* Professional Background Elements */}
+        <div className="absolute inset-0">
+          {/* Subtle Grid Pattern */}
+          <div className="absolute inset-0 opacity-[0.02]">
+            <div className="absolute top-0 left-0 w-full h-full" style={{
+              backgroundImage: `
+                linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '50px 50px'
+            }}></div>
+          </div>
+          
+          {/* Professional Gradient Overlays */}
+          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#6D3434]/5 to-transparent"></div>
+          <div className="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-t from-[#6D3434]/5 to-transparent"></div>
+          
+          {/* Elegant Geometric Shapes */}
+          <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#E4412E]/3 to-[#6D3434]/3 rounded-full blur-3xl"></div>
+          <div className="absolute top-40 right-32 w-48 h-48 bg-gradient-to-bl from-[#6D3434]/3 to-[#E4412E]/3 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-32 left-40 w-80 h-80 bg-gradient-to-tr from-[#6D3434]/2 to-[#E4412E]/2 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-48 right-20 w-56 h-56 bg-gradient-to-tl from-[#6D3434]/3 to-[#E4412E]/3 rounded-full blur-3xl"></div>
+          
+          {/* Professional Lines */}
+          <div className="absolute top-1/4 left-0 w-32 h-px bg-gradient-to-r from-transparent via-[#E4412E]/20 to-transparent"></div>
+          <div className="absolute top-1/4 right-0 w-32 h-px bg-gradient-to-l from-transparent via-[#6D3434]/20 to-transparent"></div>
+          <div className="absolute bottom-1/4 left-0 w-32 h-px bg-gradient-to-r from-transparent via-[#E4412E]/20 to-transparent"></div>
+          <div className="absolute bottom-1/4 right-0 w-32 h-px bg-gradient-to-l from-transparent via-[#6D3434]/20 to-transparent"></div>
+          
+          {/* Subtle Dots Pattern */}
+          <div className="absolute inset-0 opacity-[0.015]" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0)`,
+            backgroundSize: '20px 20px'
+          }}></div>
         </div>
         
-        {/* Elegant Floating Elements */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-black/5 rounded-full animate-construction-float"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 bg-black/5 rounded-full animate-construction-float animation-delay-1000"></div>
-        <div className="absolute bottom-32 left-40 w-40 h-40 bg-black/5 rounded-full animate-construction-float animation-delay-2000"></div>
-        <div className="absolute bottom-48 right-20 w-28 h-28 bg-black/5 rounded-full animate-construction-float animation-delay-3000"></div>
-        <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-black/5 rounded-full animate-construction-float animation-delay-4000"></div>
-        <div className="absolute top-1/3 right-1/4 w-36 h-36 bg-black/5 rounded-full animate-construction-float animation-delay-1000"></div>
-      </div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-black/10 backdrop-blur-sm rounded-full text-black text-sm font-semibold mb-8 border border-black/20 shadow-lg">
-            <span className="w-2 h-2 bg-black rounded-full mr-3 animate-pulse"></span>
-            Nuestros Servicios
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#E4412E]/10 to-[#6D3434]/10 backdrop-blur-sm rounded-full text-[#6D3434] text-sm font-semibold mb-8 border border-[#E4412E]/20 shadow-lg tracking-wide">
+              <span className="w-3 h-3 bg-[#E4412E] rounded-full mr-3 animate-pulse"></span>
+              NUESTROS SERVICIOS
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-8 tracking-tight leading-tight">
+              Galería de Proyectos
+              <br />
+              <span className="bg-gradient-to-r from-[#E4412E] via-[#6D3434] to-slate-700 bg-clip-text text-transparent font-extrabold">
+                GICRAM
+              </span>
+            </h2>
+            
+            <p className="max-w-3xl mx-auto text-lg text-slate-600 leading-relaxed font-medium tracking-wide">
+              Explora nuestra galería interactiva de proyectos y servicios de construcción con la más alta calidad y profesionalismo.
+            </p>
           </div>
-          
-          <Text variant="h2" className="mb-8 text-black">
-            Maquinaria Pesada
-            <br />
-            <span className="text-black font-black">de Primera Calidad</span>
-          </Text>
-          
-          <Text variant="body" color="secondary" className="max-w-3xl mx-auto text-lg text-gray-600">
-            Contamos con una amplia flota de maquinaria pesada moderna y bien mantenida. 
-            Todas nuestras máquinas cuentan con operadores certificados y mantenimiento preventivo.
-          </Text>
-        </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <ServiceCard
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                features={service.features}
-                price={service.price}
-                className="group-hover:shadow-2xl group-hover:scale-105 transition-all duration-500 bg-white border border-gray-200"
+          {/* Circular Gallery Container with Professional Styling */}
+          <div className="relative">
+            {/* Gallery Background Card */}
+            <div className="absolute inset-0 bg-white/40 backdrop-blur-sm rounded-3xl border border-white/20 shadow-2xl -m-8"></div>
+            
+            {/* Gallery */}
+            <div className="relative h-96 md:h-[500px] lg:h-[600px] p-8">
+              <CircularGallery 
+                items={galleryItems}
+                bend={2}
+                textColor="#000000"
+                borderRadius={0.1}
+                font="bold 24px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                scrollSpeed={1.5}
+                scrollEase={0.08}
               />
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* CTA Section with Black & White Theme */}
-        <div className="text-center">
-          <div className="bg-black rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto relative overflow-hidden">
-            {/* Elegant Background Pattern */}
-            <div className="absolute inset-0 bg-white/5"></div>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-lg opacity-20 animate-construction-pulse transform rotate-45"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-lg opacity-20 animate-construction-pulse animation-delay-1000 transform -rotate-45"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/20 rounded-lg opacity-30 animate-machinery-vibrate"></div>
-            
-            <div className="relative">
-              <div className="text-4xl mb-4">
-                <ConstructionIcon size="xl" className="text-white mx-auto" />
-              </div>
-              <Text variant="h3" color="white" className="mb-6">
-                ¿Necesitas algo específico?
-              </Text>
-              
-              <Text variant="body" color="white" className="mb-8 text-lg opacity-90">
-                Si no encuentras la maquinaria que necesitas, contáctanos. 
-                Tenemos conexiones con otros proveedores para satisfacer todas tus necesidades.
-              </Text>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-black font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                  <SearchIcon size="md" className="mr-2" />
-                  Consultar Disponibilidad
-                </button>
-                <button className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center">
-                  <PhoneIcon size="md" className="mr-2" />
-                  Solicitar Cotización
-                </button>
-              </div>
+          {/* Professional Instructions */}
+          <div className="text-center mt-16">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-100 to-[#6D3434]/10 rounded-2xl border border-slate-200/50 shadow-lg">
+              <LightbulbIcon size="md" className="text-[#E4412E] mr-3" />
+              <p className="text-slate-700 text-sm font-semibold tracking-wide uppercase">
+                Usa la rueda del mouse o desliza para navegar por la galería
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* OPCIONES DE CRÉDITO Section */}
+      <section className="py-24 relative overflow-hidden">
+        {/* Split Background */}
+        <div className="absolute inset-0">
+          {/* Left Half - Public Works */}
+          <div className="absolute left-0 top-0 w-1/2 h-full bg-gradient-to-br from-[#6D3434] via-[#6D3434] to-[#6D3434]"></div>
+          {/* Right Half - Private Works */}
+          <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-br from-[#E4412E] via-[#E4412E] to-[#E4412E]"></div>
+          
+          {/* Center Divider */}
+          <div className="absolute left-1/2 top-0 w-px h-full bg-gradient-to-b from-transparent via-white/30 to-transparent transform -translate-x-1/2"></div>
+          
+          {/* Subtle Patterns */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+            <div className="absolute bottom-20 right-20 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
+            <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full blur-xl"></div>
+            <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+          </div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-bold mb-8 border border-white/30 shadow-lg tracking-widest uppercase">
+              <span className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></span>
+              OPCIONES DE CRÉDITO
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight leading-tight">
+              Asesoría Crediticia
+              <br />
+              <span className="text-white font-extrabold">Sin Costo</span>
+            </h2>
+            
+            <p className="max-w-4xl mx-auto text-lg text-white/90 leading-relaxed font-medium tracking-wide">
+              El equipo de ventas de Gicram Construcciones te asesorará en el trámite de tu crédito sin costo alguno y te presentará la extensa gama de modelos crediticios que se ofrecen en el mercado.
+            </p>
+          </div>
+
+          {/* Two Halves Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[600px]">
+            {/* Left Half - Obras Públicas */}
+            <div className="relative p-12 lg:p-16 flex flex-col justify-center">
+              <div className="text-center lg:text-left">
+                <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-8 backdrop-blur-sm border border-white/30">
+                  <BuildingIcon size="xl" className="text-white" />
+                </div>
+                
+                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 tracking-tight">
+                  Obras Públicas
+                </h3>
+                
+                <p className="text-white/90 text-lg leading-relaxed mb-8 font-medium tracking-wide">
+                  Si no eres derechohabiente del Infonavit u otra institución de vivienda, puedes pedir un crédito hipotecario. Nosotros te brindamos la asesoría que necesitas y te ayudamos con el trámite.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center text-white/80 font-medium">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                    Créditos hipotecarios tradicionales
+                  </div>
+                  <div className="flex items-center text-white/80 font-medium">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                    Asesoría personalizada
+                  </div>
+                  <div className="flex items-center text-white/80 font-medium">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                    Tramitación completa
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Half - Obras Privadas */}
+            <div className="relative p-12 lg:p-16 flex flex-col justify-center">
+              <div className="text-center lg:text-left">
+                <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto lg:mx-0 mb-8 backdrop-blur-sm border border-white/30">
+                  <HomeIcon size="xl" className="text-white" />
+                </div>
+                
+                <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 tracking-tight">
+                  Obras Privadas
+                </h3>
+                
+                <p className="text-white/90 text-lg leading-relaxed mb-8 font-medium tracking-wide">
+                  Para proyectos residenciales, comerciales e industriales. Te ayudamos a encontrar la mejor opción crediticia que se adapte a tus necesidades y capacidad de pago.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center text-white/80 font-medium">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                    Créditos para desarrollo inmobiliario
+                  </div>
+                  <div className="flex items-center text-white/80 font-medium">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                    Financiamiento empresarial
+                  </div>
+                  <div className="flex items-center text-white/80 font-medium">
+                    <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                    Soluciones a medida
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <div className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-bold border border-white/30 shadow-lg tracking-wide uppercase">
+              <span className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></span>
+              Asesoría gratuita disponible
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

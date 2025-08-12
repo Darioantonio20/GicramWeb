@@ -1,117 +1,135 @@
 import React from 'react';
-import { Button, Text, Aurora, PhoneIcon, ShieldIcon, WrenchIcon, ZapIcon } from '../atoms';
+import { Text, FloatingImages } from '../atoms';
 
 const Hero: React.FC = () => {
+  // Imágenes flotantes del CircularGallery - más imágenes para mejor visibilidad
+  const floatingImages = [
+    {
+      image: `https://i.ibb.co/Y7TC7Y6y/Captura-de-pantalla-2025-08-12-a-la-s-1-46-03-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/M5Cz4cLb/Captura-de-pantalla-2025-08-12-a-la-s-1-46-34-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/WWkZ8TL8/Captura-de-pantalla-2025-08-12-a-la-s-1-46-42-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/Y7kyp8hT/Captura-de-pantalla-2025-08-12-a-la-s-1-46-53-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/0jjGR06d/Captura-de-pantalla-2025-08-12-a-la-s-1-47-01-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/HDByKCDn/Captura-de-pantalla-2025-08-12-a-la-s-1-47-14-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/fGkbqQWt/Captura-de-pantalla-2025-08-12-a-la-s-1-47-26-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/tpgnGRHJ/Captura-de-pantalla-2025-08-12-a-la-s-1-47-43-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/Mk0hhwFY/Captura-de-pantalla-2025-08-12-a-la-s-1-47-55-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/6RhC1zH9/Captura-de-pantalla-2025-08-12-a-la-s-2-00-27-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/zWzyx9pr/Captura-de-pantalla-2025-08-12-a-la-s-2-00-37-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/nqsj9NWN/Captura-de-pantalla-2025-08-12-a-la-s-2-00-58-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/F4nMNh30/Captura-de-pantalla-2025-08-12-a-la-s-2-01-21-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/r2HNfKKD/Captura-de-pantalla-2025-08-12-a-la-s-2-01-28-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/gZ8sLQ29/Captura-de-pantalla-2025-08-12-a-la-s-2-01-47-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/BHL02C19/Captura-de-pantalla-2025-08-12-a-la-s-2-02-30-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/vvBjkDbF/Captura-de-pantalla-2025-08-12-a-la-s-2-02-39-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/Xf2Pbtv4/Captura-de-pantalla-2025-08-12-a-la-s-2-03-27-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/ZphwP1N3/Captura-de-pantalla-2025-08-12-a-la-s-2-04-21-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/b5vJJy6x/Captura-de-pantalla-2025-08-12-a-la-s-2-05-40-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/mF425RmX/Captura-de-pantalla-2025-08-12-a-la-s-2-05-48-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/4wzkSNbY/Captura-de-pantalla-2025-08-12-a-la-s-2-06-35-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/Q3CJqbXk/Captura-de-pantalla-2025-08-12-a-la-s-2-06-10-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/YKpVyfm/Captura-de-pantalla-2025-08-12-a-la-s-2-03-43-p-m.png`,
+      text: "",
+    },
+    {
+      image: `https://i.ibb.co/Xf2Pbtv4/Captura-de-pantalla-2025-08-12-a-la-s-2-03-27-p-m.png`,
+      text: "",
+    }
+  ];
+
   return (
     <section id="home" className="relative min-h-screen overflow-hidden bg-gray-900">
-      {/* Aurora Background */}
-      <div className="absolute inset-0 z-0">
-        <Aurora
-          colorStops={["#FCFF66", "#E7D508", "#8B6809"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={1.0}
-        />
-      </div>
+      {/* Floating Images Background - sin capa adicional */}
+      <FloatingImages images={floatingImages} />
       
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
-          {/* Content */}
-          <div className="text-center lg:text-left space-y-12">
-            <div className="space-y-10">
-              {/* Professional Badge */}
-              <div className="inline-flex items-center px-8 py-4 bg-yellow-500/20 backdrop-blur-sm rounded-full text-yellow-300 text-base font-semibold mb-10 border border-yellow-500/30 shadow-2xl">
-                <span className="w-3 h-3 bg-yellow-400 rounded-full mr-4 animate-pulse"></span>
-                Líder en Renta de Maquinaria Pesada
+        <div className="text-center space-y-12 min-h-[80vh] flex flex-col justify-center">
+          <div className="space-y-10">
+            {/* Main Headline - sin badge */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <Text variant="h1" color="white" className="mb-8 leading-tight font-black text-5xl lg:text-6xl">
+                  Soluciones de Construcción
+                  <br />
+                  <span className="text-[#E4412E] font-extrabold bg-gradient-to-r from-[#E4412E] via-[#6D3434] to-[#E4412E] bg-clip-text text-transparent">
+                    de Primera Calidad
+                  </span>
+                </Text>
+               
               </div>
-              
-              {/* Main Headline */}
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <Text variant="h1" color="white" className="mb-8 leading-tight font-black text-5xl lg:text-6xl">
-                    Maquinaria Pesada
-                    <br />
-                    <span className="text-yellow-400 font-extrabold bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-200 bg-clip-text text-transparent">
-                      de Primera Calidad
-                    </span>
-                  </Text>
-                  
-                  <Text variant="body" color="gray" className="mb-10 text-xl leading-relaxed max-w-3xl text-gray-300 font-medium">
-                    GICRAM es su socio estratégico en proyectos de construcción. Ofrecemos la flota más moderna 
-                    de maquinaria pesada con operadores certificados y mantenimiento preventivo incluido.
-                  </Text>
-                </div>
-              </div>
-            </div>
-            
-            {/* Professional CTA Button */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center">
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-gray-900 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 font-bold text-lg px-10 py-4 flex items-center"
-              >
-                Solicitar Cotización
-                <PhoneIcon size="md" className="ml-2 text-current" />
-              </Button>
             </div>
           </div>
           
-          {/* Professional Machinery Showcase */}
-          <div className="relative">
-            <div className="relative bg-gray-800/50 backdrop-blur-md rounded-3xl p-10 shadow-2xl border border-gray-700 transform hover:scale-105 transition-all duration-500">
-              {/* Professional Elements */}
-              <div className="absolute -top-6 -right-6 w-12 h-12 bg-yellow-500 rounded-full animate-ping"></div>
-              <div className="absolute -bottom-6 -left-6 w-10 h-10 bg-yellow-400 rounded-full animate-pulse"></div>
-              
-              <div className="text-center space-y-8">
-                {/* Professional Construction Machinery Image */}
-                <div className="relative mb-8">
-                  <img 
-                    src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                    alt="Flota de Maquinaria Pesada de Construcción"
-                    className="w-full h-64 object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
-                  />
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
-                  {/* Professional badge on image */}
-                  <div className="absolute bottom-4 left-4 bg-yellow-500/90 backdrop-blur-sm px-4 py-2 rounded-full text-black font-bold text-sm">
-                    Flota Profesional
-                  </div>
-                </div>
-                
-                <div className="space-y-4">
-                  <Text variant="h3" color="white" className="mb-4 font-bold">
-                    Flota Empresarial
-                  </Text>
-                  <Text variant="body" color="gray" className="text-gray-300 leading-relaxed">
-                    Excavadoras • Retroexcavadoras • Bulldozers • Grúas • Cargadores • Compactadores
-                  </Text>
-                </div>
-                
-                {/* Professional Feature Pills */}
-                <div className="flex flex-wrap justify-center gap-3 mt-8">
-                  <span className="px-4 py-2 bg-yellow-500/20 rounded-full text-yellow-300 text-sm font-semibold border border-yellow-500/30 flex items-center">
-                    <ShieldIcon size="sm" className="mr-2" />
-                    Operadores Certificados
-                  </span>
-                  <span className="px-4 py-2 bg-yellow-500/20 rounded-full text-yellow-300 text-sm font-semibold border border-yellow-500/30 flex items-center">
-                    <WrenchIcon size="sm" className="mr-2" />
-                    Mantenimiento Incluido
-                  </span>
-                  <span className="px-4 py-2 bg-yellow-500/20 rounded-full text-yellow-300 text-sm font-semibold border border-yellow-500/30 flex items-center">
-                    <ZapIcon size="sm" className="mr-2" />
-                    Entrega Inmediata
-                  </span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Professional Floating Elements */}
-            <div className="absolute -top-10 -left-10 w-20 h-20 bg-yellow-500/20 rounded-lg opacity-60 animate-pulse transform rotate-45 border border-yellow-500/30"></div>
-            <div className="absolute -bottom-10 -right-10 w-16 h-16 bg-yellow-400/20 rounded-lg opacity-60 animate-pulse transform -rotate-45 border border-yellow-400/30"></div>
-            <div className="absolute top-1/2 -right-6 w-12 h-12 bg-yellow-500/20 rounded-lg opacity-60 animate-pulse transform rotate-12 border border-yellow-500/30"></div>
-          </div>
+          {/* Sin botón de cotización */}
         </div>
       </div>
     </section>

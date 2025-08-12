@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, ExcavatorIcon, ConstructionIcon, BulldozerIcon, CraneIcon, LoaderIcon, PhoneIcon, EmailIcon, LocationIcon } from '../atoms';
+import { Text, ConstructionIcon, WrenchIcon, ShieldIcon, ZapIcon, PhoneIcon, EmailIcon, LocationIcon } from '../atoms';
 
 const Footer: React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                 GICRAM
               </Text>
               <Text variant="body" color="white" className="mb-6 opacity-90 leading-relaxed text-gray-300">
-                Líder en renta de maquinaria pesada para proyectos de construcción. 
+                Líder en servicios de construcción y proyectos de infraestructura. 
                 Más de 10 años de experiencia en el sector, ofreciendo soluciones 
                 confiables y eficientes con la mejor tecnología disponible.
               </Text>
@@ -62,37 +62,30 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <a href="#services" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
-                  <ExcavatorIcon size="sm" className="mr-2 text-white" />
-                  Excavadoras
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
+                  <span className="w-2 h-2 bg-[#E4412E] rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
                   <ConstructionIcon size="sm" className="mr-2 text-white" />
-                  Retroexcavadoras
+                  Construcción
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
-                  <BulldozerIcon size="sm" className="mr-2 text-white" />
-                  Bulldozers
+                  <span className="w-2 h-2 bg-[#E4412E] rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
+                  <WrenchIcon size="sm" className="mr-2 text-white" />
+                  Remodelación
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
-                  <CraneIcon size="sm" className="mr-2 text-white" />
-                  Grúas
+                  <span className="w-2 h-2 bg-[#E4412E] rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
+                  <ShieldIcon size="sm" className="mr-2 text-white" />
+                  Mantenimiento
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="w-2 h-2 bg-white rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
-                  <LoaderIcon size="sm" className="mr-2 text-white" />
-                  Cargadores
+                  <span className="w-2 h-2 bg-[#E4412E] rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
+                  <ZapIcon size="sm" className="mr-2 text-white" />
+                  Consultoría
                 </a>
               </li>
             </ul>
@@ -105,15 +98,15 @@ const Footer: React.FC = () => {
             </Text>
             <ul className="space-y-4">
               <li className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                <PhoneIcon size="sm" className="mr-2 text-white" />
+                <PhoneIcon size="sm" className="mr-2 text-[#E4412E]" />
                 +52 (55) 1234-5678
               </li>
               <li className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                <EmailIcon size="sm" className="mr-2 text-white" />
+                <EmailIcon size="sm" className="mr-2 text-[#E4412E]" />
                 info@gicram.com
               </li>
               <li className="text-gray-300 flex items-start">
-                <LocationIcon size="sm" className="mr-2 mt-1 text-white" />
+                <LocationIcon size="sm" className="mr-2 mt-1 text-[#E4412E]" />
                 <div>
                   Av. Industrial 123<br />
                   Col. Industrial<br />
@@ -131,10 +124,10 @@ const Footer: React.FC = () => {
               © 2024 GICRAM. Todos los derechos reservados.
             </Text>
             <div className="flex space-x-8 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+              <a href="#" className="text-gray-400 hover:text-[#E4412E] transition-colors duration-300 text-sm">
                 Política de Privacidad
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+              <a href="#" className="text-gray-400 hover:text-[#E4412E] transition-colors duration-300 text-sm">
                 Términos de Servicio
               </a>
             </div>

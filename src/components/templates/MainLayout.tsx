@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigation } from '../molecules';
-import { Hero, Services, Contact, Footer } from '../organisms';
+import { Hero, About, Services, Projects, Equipment, CompanyInfo, Contact, Footer } from '../organisms';
 
 const MainLayout: React.FC = () => {
   return (
@@ -8,7 +8,11 @@ const MainLayout: React.FC = () => {
       <Navigation />
       <main>
         <Hero />
+        <About />
         <Services />
+        <Projects />
+        <Equipment />
+        <CompanyInfo />
         <Contact />
       </main>
       <Footer />
