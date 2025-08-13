@@ -3,7 +3,13 @@ import { Text } from '../atoms';
 import { ChevronDown, X, Menu } from 'lucide-react';
 import logoGicram from '../../assets/images/gicramLogo2.png';
 
-const Navigation: React.FC = () => {
+type ViewType = 'landing' | 'obra-privada' | 'obra-publica';
+
+interface NavigationProps {
+  onViewChange: (view: ViewType) => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeItem, setActiveItem] = useState('Inicio');
@@ -13,41 +19,8 @@ const Navigation: React.FC = () => {
     { 
       name: 'Inicio', 
       href: '#home',
-      hasDropdown: false
-    },
-    { 
-      name: 'Servicios', 
-      href: '#services',
-      hasDropdown: true,
-      dropdownItems: [
-        {
-          title: 'Construcción',
-          items: [
-            'Construcción Residencial',
-            'Construcción Comercial',
-            'Remodelación',
-            'Mantenimiento'
-          ]
-        },
-        {
-          title: 'Desarrollo',
-          items: [
-            'Desarrollo Inmobiliario',
-            'Proyectos Urbanos',
-            'Planificación',
-            'Consultoría'
-          ]
-        },
-        {
-          title: 'Financiamiento',
-          items: [
-            'Crédito Infonavit',
-            'Crédito Hipotecario',
-            'Crédito Fovissste',
-            'Asesoría Financiera'
-          ]
-        }
-      ]
+      hasDropdown: false,
+      action: () => onViewChange('landing')
     },
     { 
       name: 'Desarrollos', 
@@ -55,44 +28,36 @@ const Navigation: React.FC = () => {
       hasDropdown: true,
       dropdownItems: [
         {
-          title: 'Tapachula',
-          items: [
-            'Rinconada del Carmen Nicte',
-            'Rinconada del Carmen Copán',
-            'Rinconada del Carmen Tikal',
-            'Casas Duplex Akishino'
-          ]
+          title: 'OBRA PRIVADA',
+          description: 'Desarrollos residenciales y comerciales',
+          action: () => onViewChange('obra-privada')
         },
         {
-          title: 'Tuxtla Gutiérrez',
-          items: [
-            'Rincón del Carmen Casas Duplex',
-            'Rincón del Carmen Casa 2 Niveles'
-          ]
+          title: 'OBRA PÚBLICA',
+          description: 'Infraestructura y proyectos gubernamentales',
+          action: () => onViewChange('obra-publica')
         }
       ]
     },
     { 
       name: 'Nosotros', 
       href: '#about',
-      hasDropdown: false
+      hasDropdown: false,
+      action: () => onViewChange('landing')
     },
     { 
       name: 'Contacto', 
       href: '#contact',
-      hasDropdown: false
+      hasDropdown: false,
+      action: () => onViewChange('landing')
     }
   ];
 
-  const handleSmoothScroll = (href: string, itemName: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+  const handleItemClick = (item: any) => {
+    if (item.action) {
+      item.action();
     }
-    setActiveItem(itemName);
+    setActiveItem(item.name);
     setIsMenuOpen(false);
     setActiveDropdown(null);
   };
@@ -120,11 +85,16 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-20 lg:h-24">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img 
-              src={logoGicram} 
-              alt="GICRAM DESARROLLADOR INMOBILIARIO"
-              className="h-12 lg:h-16 w-auto hover:scale-105 transition-transform duration-300"
-            />
+            <button
+              onClick={() => onViewChange('landing')}
+              className="hover:scale-105 transition-transform duration-300"
+            >
+              <img 
+                src={logoGicram} 
+                alt="GICRAM DESARROLLADOR INMOBILIARIO"
+                className="h-12 lg:h-16 w-auto"
+              />
+            </button>
           </div>
 
           {/* Desktop Menu */}
@@ -133,11 +103,11 @@ const Navigation: React.FC = () => {
               {menuItems.map((item) => (
                 <div key={item.name} className="relative">
                   <button
-                    onClick={() => item.hasDropdown ? toggleDropdown(item.name) : handleSmoothScroll(item.href, item.name)}
+                    onClick={() => item.hasDropdown ? toggleDropdown(item.name) : handleItemClick(item)}
                     className={`relative px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 flex items-center space-x-1 min-w-[100px] justify-center ${
                       activeItem === item.name 
-                        ? 'text-white bg-red-600 shadow-md' 
-                        : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+                        ? 'text-white bg-gicram-primary shadow-md' 
+                        : 'text-gray-700 hover:text-gicram-primary hover:bg-gicram-primary/10'
                     }`}
                   >
                     <Text 
@@ -158,28 +128,24 @@ const Navigation: React.FC = () => {
 
                   {/* Dropdown Menu */}
                   {item.hasDropdown && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-2 w-[500px] bg-white rounded-xl shadow-2xl border border-gray-100 py-6 z-50">
-                      <div className="grid grid-cols-3 gap-6 px-6">
+                    <div className="absolute top-full left-0 mt-2 w-[400px] bg-white rounded-xl shadow-2xl border border-gray-100 py-6 z-50">
+                      <div className="space-y-4 px-6">
                         {item.dropdownItems?.map((section, sectionIndex) => (
-                          <div key={sectionIndex} className="space-y-3">
-                            <Text variant="xs" color="gray" className="font-bold text-gray-800 text-xs uppercase tracking-wider border-b border-gray-200 pb-2">
-                              {section.title}
-                            </Text>
-                            <ul className="space-y-2">
-                              {section.items.map((subItem, itemIndex) => (
-                                <li key={itemIndex}>
-                                  <button
-                                    onClick={() => handleSmoothScroll('#developments', subItem)}
-                                    className="flex items-center space-x-2 text-sm text-gray-600 hover:text-red-600 transition-colors duration-200 group w-full text-left"
-                                  >
-                                    <div className="w-1.5 h-1.5 border-2 border-gray-300 rounded-full group-hover:border-red-600 transition-colors duration-200 flex-shrink-0"></div>
-                                    <span className="group-hover:text-red-600 transition-colors duration-200 leading-relaxed">
-                                      {subItem}
-                                    </span>
-                                  </button>
-                                </li>
-                              ))}
-                            </ul>
+                          <div key={sectionIndex} className="group">
+                            <button
+                              onClick={() => {
+                                handleItemClick({ name: section.title, action: section.action });
+                                setActiveDropdown(null);
+                              }}
+                              className="w-full text-left p-4 rounded-lg hover:bg-gicram-primary/5 transition-all duration-300 border border-transparent hover:border-gicram-primary/20"
+                            >
+                              <Text variant="xs" color="gray" className="font-bold text-gicram-secondary text-sm uppercase tracking-wider mb-2 group-hover:text-gicram-primary transition-colors duration-300">
+                                {section.title}
+                              </Text>
+                              <Text variant="body" color="gray" className="text-sm text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                                {section.description}
+                              </Text>
+                            </button>
                           </div>
                         ))}
                       </div>
@@ -195,7 +161,7 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-red-600 focus:outline-none p-2 rounded-lg hover:bg-red-50 transition-all duration-300"
+              className="text-gray-700 hover:text-gicram-primary focus:outline-none p-2 rounded-lg hover:bg-gicram-primary/10 transition-all duration-300"
             >
               {isMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -214,11 +180,11 @@ const Navigation: React.FC = () => {
             {menuItems.map((item, index) => (
               <div key={item.name}>
                 <button
-                  onClick={() => item.hasDropdown ? toggleDropdown(item.name) : handleSmoothScroll(item.href, item.name)}
+                  onClick={() => item.hasDropdown ? toggleDropdown(item.name) : handleItemClick(item)}
                   className={`relative block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 flex items-center justify-between ${
                     activeItem === item.name 
-                      ? 'text-white bg-red-600 shadow-md' 
-                      : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+                      ? 'text-white bg-gicram-primary shadow-md' 
+                      : 'text-gray-700 hover:text-gicram-primary hover:bg-gicram-primary/10'
                   }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
@@ -240,27 +206,23 @@ const Navigation: React.FC = () => {
 
                 {/* Mobile Dropdown */}
                 {item.hasDropdown && activeDropdown === item.name && (
-                  <div className="mt-2 ml-4 bg-gray-50 rounded-lg p-4 space-y-4">
+                  <div className="mt-2 ml-4 bg-gray-50 rounded-lg p-4 space-y-3">
                     {item.dropdownItems?.map((section, sectionIndex) => (
-                      <div key={sectionIndex} className="space-y-2">
-                        <Text variant="xs" color="gray" className="font-bold text-gray-800 text-sm uppercase tracking-wide border-b border-gray-200 pb-1">
-                          {section.title}
-                        </Text>
-                        <ul className="space-y-1">
-                          {section.items.map((subItem, itemIndex) => (
-                            <li key={itemIndex}>
-                              <button
-                                onClick={() => handleSmoothScroll('#developments', subItem)}
-                                className="flex items-center space-x-2 text-sm text-gray-600 hover:text-red-600 transition-colors duration-200 group pl-2 py-1"
-                              >
-                                <div className="w-1.5 h-1.5 border-2 border-gray-300 rounded-full group-hover:border-red-600 transition-colors duration-200"></div>
-                                <span className="group-hover:text-red-600 transition-colors duration-200">
-                                  {subItem}
-                                </span>
-                              </button>
-                            </li>
-                          ))}
-                        </ul>
+                      <div key={sectionIndex} className="group">
+                        <button
+                          onClick={() => {
+                            handleItemClick({ name: section.title, action: section.action });
+                            setActiveDropdown(null);
+                          }}
+                          className="w-full text-left p-3 rounded-lg hover:bg-gicram-primary/5 transition-all duration-300"
+                        >
+                          <Text variant="xs" color="gray" className="font-bold text-gicram-secondary text-sm uppercase tracking-wide mb-2 group-hover:text-gicram-primary transition-colors duration-300">
+                            {section.title}
+                          </Text>
+                          <Text variant="body" color="gray" className="text-xs text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                            {section.description}
+                          </Text>
+                        </button>
                       </div>
                     ))}
                   </div>

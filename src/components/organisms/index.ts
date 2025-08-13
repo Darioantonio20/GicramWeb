@@ -3,4 +3,6 @@ export { default as Hero } from './Hero';
 export { default as CreditOptions } from './CreditOptions';
 export { default as Developments } from './Developments';
 export { default as Team } from './Team';
-export { default as About } from './About'; 
+export { default as About } from './About';
+export { default as ObraPrivada } from './ObraPrivada';
+export { default as ObraPublica } from './ObraPublica'; 

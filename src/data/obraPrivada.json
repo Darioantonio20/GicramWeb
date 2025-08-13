@@ -1,0 +1,88 @@
+{
+  "titulo": "OBRA PRIVADA",
+  "descripcion": "En Gicram contribuimos al éxito de nuestros clientes manteniendo un interés constante por establecer alianzas comerciales de largo plazo, asegurando altos estándares de calidad y la generación de soluciones técnico-económicas de alto valor agregado.",
+  "proyectos": [
+    {
+      "ubicacion": "Tuxtla Gutiérrez",
+      "proyectos": [
+        "Residencia Country La Cima",
+        "Proyecto Oficinas Cowork"
+      ]
+    },
+    {
+      "ubicacion": "Guadalajara",
+      "proyectos": [
+        "Centro Histórico",
+        "Las Américas",
+        "Vallarta",
+        "Tlaquepaque"
+      ]
+    },
+    {
+      "ubicacion": "Veracruz",
+      "proyectos": []
+    },
+    {
+      "ubicacion": "Estado de México",
+      "proyectos": [
+        "Ecatepec",
+        "Coacalco",
+        "Cuautitlán Izcalli"
+      ]
+    },
+    {
+      "ubicacion": "Ciudad de México",
+      "proyectos": [
+        "La Villa",
+        "Berlín",
+        "Zaragoza",
+        "Ermita Iztapalapa"
+      ]
+    },
+    {
+      "ubicacion": "Aguascalientes",
+      "proyectos": []
+    },
+    {
+      "ubicacion": "Querétaro",
+      "proyectos": []
+    },
+    {
+      "ubicacion": "Culiacán",
+      "proyectos": []
+    },
+    {
+      "ubicacion": "Mexicali",
+      "proyectos": []
+    },
+    {
+      "ubicacion": "Saltillo",
+      "proyectos": []
+    },
+    {
+      "ubicacion": "Chihuahua",
+      "proyectos": []
+    }
+  ],
+  "compromiso": {
+    "titulo": "Nuestro Compromiso",
+    "descripcion": "Cada proyecto de obra privada en GICRAM está diseñado para superar las expectativas de nuestros clientes, ofreciendo espacios habitacionales y comerciales que aseguran una excelente inversión a mediano y largo plazo.",
+    "valores": [
+      {
+        "icono": "⭐",
+        "titulo": "Calidad",
+        "descripcion": "Altos estándares en todos nuestros proyectos"
+      },
+      {
+        "icono": "🤝",
+        "titulo": "Alianzas",
+        "descripcion": "Relaciones comerciales de largo plazo"
+      },
+      {
+        "icono": "💎",
+        "titulo": "Valor",
+        "descripcion": "Soluciones de alto valor agregado"
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from '../atoms';
-import { Target, Eye, Heart, Zap, TrendingUp, Leaf, Building2 } from 'lucide-react';
+import { Target, Eye, Heart, Zap, TrendingUp, Leaf } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -21,9 +21,6 @@ const About: React.FC = () => {
         {/* Descripción Principal */}
         <div className="max-w-5xl mx-auto mb-20">
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-2xl border border-gicram-tertiary/20 relative overflow-hidden">
-            <div className="absolute top-6 right-6 w-16 h-16 bg-gradient-to-br from-gicram-primary to-gicram-primary-light rounded-2xl flex items-center justify-center shadow-lg">
-              <Building2 className="w-8 h-8 text-white" />
-            </div>
             <Text variant="body" color="gray" className="text-lg sm:text-xl text-gicram-secondary leading-relaxed text-center mb-6">
               GICRAM es una inmobiliaria mexicana con el fiel compromiso de dar soluciones integrales a las necesidades de vivienda.
             </Text>

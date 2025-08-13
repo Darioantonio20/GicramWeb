@@ -1,6 +1,6 @@
 import React from 'react';
 import ImgBanner from '../../assets/images/imgBanner.jpeg';
-import ImgBannerTablet from '../../assets/images/imgBannerTablet.jpeg';
+import ImgBannerTablet from '../../assets/images/imgBannerTablet.png';
 import ImgBannerMobile from '../../assets/images/imgBannerMobile.jpeg';
 
 const Hero: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '../atoms';
+import { Text, OptimizedImage } from '../atoms';
 import imgCreditoInfonavit from '../../assets/images/imgCreditoInfonavit.png';
 import imgCreditoHipotecario from '../../assets/images/imgCreditoHipotecario.png';
 import imgCreditoFovissste from '../../assets/images/imgCreditoFovissste.png';
@@ -24,10 +24,13 @@ const CreditOptions: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gicram-tertiary">
             <div className="text-center">
               <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg overflow-hidden border border-gicram-tertiary">
-                <img 
-                  src={imgCreditoInfonavit} 
-                  alt="Crédito Infonavit" 
+                <OptimizedImage 
+                  src={imgCreditoInfonavit}
+                  alt="Crédito Infonavit"
                   className="w-full h-full object-contain p-2"
+                  spinnerSize="md"
+                  spinnerVariant="primary"
+                  fallbackText="Error al cargar logo Infonavit"
                 />
               </div>
               <Text variant="h3" color="gray" className="text-2xl font-bold text-gicram-secondary mb-4">
@@ -40,10 +43,13 @@ const CreditOptions: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gicram-tertiary">
             <div className="text-center">
               <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg overflow-hidden border border-gicram-tertiary">
-                <img 
-                  src={imgCreditoHipotecario} 
-                  alt="Crédito Hipotecario" 
+                <OptimizedImage 
+                  src={imgCreditoHipotecario}
+                  alt="Crédito Hipotecario"
                   className="w-full h-full object-contain p-2"
+                  spinnerSize="md"
+                  spinnerVariant="secondary"
+                  fallbackText="Error al cargar logo Hipotecario"
                 />
               </div>
               <Text variant="h3" color="gray" className="text-2xl font-bold text-gicram-secondary mb-4">
@@ -56,10 +62,13 @@ const CreditOptions: React.FC = () => {
           <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gicram-tertiary">
             <div className="text-center">
               <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg overflow-hidden border border-gicram-tertiary">
-                <img 
-                  src={imgCreditoFovissste} 
-                  alt="Crédito Fovissste" 
+                <OptimizedImage 
+                  src={imgCreditoFovissste}
+                  alt="Crédito Fovissste"
                   className="w-full h-full object-contain p-2"
+                  spinnerSize="md"
+                  spinnerVariant="primary"
+                  fallbackText="Error al cargar logo Fovissste"
                 />
               </div>
               <Text variant="h3" color="gray" className="text-2xl font-bold text-gicram-secondary mb-4">
