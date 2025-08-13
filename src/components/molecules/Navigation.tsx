@@ -53,6 +53,9 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
     }
   ];
 
+  // Filtramos "Desarrollos" para mobile
+  const mobileMenuItems = menuItems.filter(item => item.name !== 'Desarrollos');
+
   const handleItemClick = (item: any) => {
     if (item.action) {
       item.action();
@@ -60,15 +63,6 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
     setActiveItem(item.name);
     setIsMenuOpen(false);
     setActiveDropdown(null);
-  };
-
-  const handleDropdownItemClick = (item: any) => {
-    if (item.action) {
-      item.action();
-    }
-    setActiveItem(item.title);
-    setActiveDropdown(null);
-    setIsMenuOpen(false); // Cerramos el menú móvil completo
   };
 
   const toggleDropdown = (itemName: string) => {
@@ -186,10 +180,10 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
           <div className="px-4 py-6 space-y-2">
-            {menuItems.map((item, index) => (
+            {mobileMenuItems.map((item, index) => (
               <div key={item.name}>
                 <button
-                  onClick={() => item.hasDropdown ? toggleDropdown(item.name) : handleItemClick(item)}
+                  onClick={() => handleItemClick(item)}
                   className={`relative block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 flex items-center justify-between ${
                     activeItem === item.name 
                       ? 'text-white bg-gicram-primary shadow-md' 
@@ -204,35 +198,7 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
                   >
                     {item.name}
                   </Text>
-                  {item.hasDropdown && (
-                    <ChevronDown 
-                      className={`w-4 h-4 transition-transform duration-300 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`}
-                    />
-                  )}
                 </button>
-
-                {/* Mobile Dropdown */}
-                {item.hasDropdown && activeDropdown === item.name && (
-                  <div className="mt-2 ml-4 bg-gradient-to-br from-gicram-tertiary to-white rounded-lg p-4 space-y-3 border border-gicram-tertiary shadow-lg">
-                    {item.dropdownItems?.map((section, sectionIndex) => (
-                      <div key={sectionIndex} className="group">
-                        <button
-                          onClick={() => handleDropdownItemClick(section)}
-                          className="w-full text-left p-4 rounded-lg hover:bg-gicram-primary/5 transition-all duration-300 bg-white shadow-sm hover:shadow-md border border-transparent hover:border-gicram-primary/20"
-                        >
-                          <Text variant="xs" color="gray" className="font-bold text-gicram-secondary text-sm uppercase tracking-wide mb-2 group-hover:text-gicram-primary transition-colors duration-300">
-                            {section.title}
-                          </Text>
-                          <Text variant="body" color="gray" className="text-xs text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                            {section.description}
-                          </Text>
-                        </button>
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
             <div className="pt-4" style={{ animationDelay: '600ms' }}></div>
