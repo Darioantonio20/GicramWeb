@@ -62,6 +62,15 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
     setActiveDropdown(null);
   };
 
+  const handleDropdownItemClick = (item: any) => {
+    if (item.action) {
+      item.action();
+    }
+    setActiveItem(item.title);
+    setActiveDropdown(null);
+    setIsMenuOpen(false); // Cerramos el menú móvil completo
+  };
+
   const toggleDropdown = (itemName: string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
@@ -206,15 +215,12 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
 
                 {/* Mobile Dropdown */}
                 {item.hasDropdown && activeDropdown === item.name && (
-                  <div className="mt-2 ml-4 bg-gray-50 rounded-lg p-4 space-y-3">
+                  <div className="mt-2 ml-4 bg-gradient-to-br from-gicram-tertiary to-white rounded-lg p-4 space-y-3 border border-gicram-tertiary shadow-lg">
                     {item.dropdownItems?.map((section, sectionIndex) => (
                       <div key={sectionIndex} className="group">
                         <button
-                          onClick={() => {
-                            handleItemClick({ name: section.title, action: section.action });
-                            setActiveDropdown(null);
-                          }}
-                          className="w-full text-left p-3 rounded-lg hover:bg-gicram-primary/5 transition-all duration-300"
+                          onClick={() => handleDropdownItemClick(section)}
+                          className="w-full text-left p-4 rounded-lg hover:bg-gicram-primary/5 transition-all duration-300 bg-white shadow-sm hover:shadow-md border border-transparent hover:border-gicram-primary/20"
                         >
                           <Text variant="xs" color="gray" className="font-bold text-gicram-secondary text-sm uppercase tracking-wide mb-2 group-hover:text-gicram-primary transition-colors duration-300">
                             {section.title}
