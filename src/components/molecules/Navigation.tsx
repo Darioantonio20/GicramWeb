@@ -1,15 +1,87 @@
-import React, { useState } from 'react';
-import { Button } from '../atoms';
+import React, { useState, useRef, useEffect } from 'react';
+import { Text } from '../atoms';
+import { ChevronDown, X, Menu } from 'lucide-react';
 import logoGicram from '../../assets/images/gicramLogo2.png';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeItem, setActiveItem] = useState('Inicio');
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const menuItems = [
-    { name: 'Inicio', href: '#home' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Contacto', href: '#contact' },
+    { 
+      name: 'Inicio', 
+      href: '#home',
+      hasDropdown: false
+    },
+    { 
+      name: 'Servicios', 
+      href: '#services',
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          title: 'Construcción',
+          items: [
+            'Construcción Residencial',
+            'Construcción Comercial',
+            'Remodelación',
+            'Mantenimiento'
+          ]
+        },
+        {
+          title: 'Desarrollo',
+          items: [
+            'Desarrollo Inmobiliario',
+            'Proyectos Urbanos',
+            'Planificación',
+            'Consultoría'
+          ]
+        },
+        {
+          title: 'Financiamiento',
+          items: [
+            'Crédito Infonavit',
+            'Crédito Hipotecario',
+            'Crédito Fovissste',
+            'Asesoría Financiera'
+          ]
+        }
+      ]
+    },
+    { 
+      name: 'Desarrollos', 
+      href: '#developments',
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          title: 'Tapachula',
+          items: [
+            'Rinconada del Carmen Nicte',
+            'Rinconada del Carmen Copán',
+            'Rinconada del Carmen Tikal',
+            'Casas Duplex Akishino'
+          ]
+        },
+        {
+          title: 'Tuxtla Gutiérrez',
+          items: [
+            'Rincón del Carmen Casas Duplex',
+            'Rincón del Carmen Casa 2 Niveles'
+          ]
+        }
+      ]
+    },
+    { 
+      name: 'Nosotros', 
+      href: '#about',
+      hasDropdown: false
+    },
+    { 
+      name: 'Contacto', 
+      href: '#contact',
+      hasDropdown: false
+    }
   ];
 
   const handleSmoothScroll = (href: string, itemName: string) => {
@@ -22,83 +94,114 @@ const Navigation: React.FC = () => {
     }
     setActiveItem(itemName);
     setIsMenuOpen(false);
+    setActiveDropdown(null);
   };
 
+  const toggleDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setActiveDropdown(null);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="bg-black/90 backdrop-blur-2xl shadow-2xl sticky top-0 z-50 border-b border-[#E4412E]/30">
-      <div className="max-w-7xl mx-auto px-8 sm:px-10 lg:px-12">
-        <div className="flex justify-between items-center h-28">
+    <nav className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20 lg:h-24">
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
               src={logoGicram} 
               alt="GICRAM DESARROLLADOR INMOBILIARIO"
-              className="h-16 w-auto hover:scale-105 transition-transform duration-300"
+              className="h-12 lg:h-16 w-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:block">
-            <div className="ml-16 flex items-baseline space-x-12">
+          <div className="hidden lg:block" ref={dropdownRef}>
+            <div className="flex items-center space-x-1">
               {menuItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => handleSmoothScroll(item.href, item.name)}
-                  className={`relative px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-700 overflow-hidden ${
-                    activeItem === item.name 
-                      ? 'text-white bg-[#E4412E]/20 shadow-2xl shadow-[#E4412E]/30' 
-                      : 'text-white hover:text-[#E4412E] hover:bg-[#E4412E]/10'
-                  }`}
-                >
-                  <span className="relative z-10">{item.name}</span>
-                  
-                  {/* Active state glow effect */}
-                  {activeItem === item.name && (
-                    <>
-                      <span className="absolute inset-0 bg-gradient-to-r from-[#E4412E]/20 via-[#E4412E]/30 to-[#E4412E]/20 rounded-2xl animate-pulse"></span>
-                      <span className="absolute inset-0 bg-[#E4412E]/10 rounded-2xl animate-ping"></span>
-                      <span className="absolute -inset-1 bg-gradient-to-r from-[#E4412E] via-[#E4412E] to-[#E4412E] rounded-2xl blur-sm opacity-75 animate-pulse"></span>
-                    </>
+                <div key={item.name} className="relative">
+                  <button
+                    onClick={() => item.hasDropdown ? toggleDropdown(item.name) : handleSmoothScroll(item.href, item.name)}
+                    className={`relative px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 flex items-center space-x-1 min-w-[100px] justify-center ${
+                      activeItem === item.name 
+                        ? 'text-white bg-red-600 shadow-md' 
+                        : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+                    }`}
+                  >
+                    <Text 
+                      variant="body" 
+                      color={activeItem === item.name ? "white" : "gray"}
+                      className="font-medium text-sm"
+                    >
+                      {item.name}
+                    </Text>
+                    {item.hasDropdown && (
+                      <ChevronDown 
+                        className={`w-3 h-3 ml-1 transition-transform duration-300 ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`}
+                      />
+                    )}
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  {item.hasDropdown && activeDropdown === item.name && (
+                    <div className="absolute top-full left-0 mt-2 w-[500px] bg-white rounded-xl shadow-2xl border border-gray-100 py-6 z-50">
+                      <div className="grid grid-cols-3 gap-6 px-6">
+                        {item.dropdownItems?.map((section, sectionIndex) => (
+                          <div key={sectionIndex} className="space-y-3">
+                            <Text variant="xs" color="gray" className="font-bold text-gray-800 text-xs uppercase tracking-wider border-b border-gray-200 pb-2">
+                              {section.title}
+                            </Text>
+                            <ul className="space-y-2">
+                              {section.items.map((subItem, itemIndex) => (
+                                <li key={itemIndex}>
+                                  <button
+                                    onClick={() => handleSmoothScroll('#developments', subItem)}
+                                    className="flex items-center space-x-2 text-sm text-gray-600 hover:text-red-600 transition-colors duration-200 group w-full text-left"
+                                  >
+                                    <div className="w-1.5 h-1.5 border-2 border-gray-300 rounded-full group-hover:border-red-600 transition-colors duration-200 flex-shrink-0"></div>
+                                    <span className="group-hover:text-red-600 transition-colors duration-200 leading-relaxed">
+                                      {subItem}
+                                    </span>
+                                  </button>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   )}
-                  
-                  {/* Hover effect (only when not active) */}
-                  {activeItem !== item.name && (
-                    <>
-                      <span className="absolute inset-0 bg-[#E4412E]/15 scale-0 hover:scale-100 transition-transform duration-500 rounded-2xl"></span>
-                      <span className="absolute bottom-0 left-0 w-0 h-1 bg-[#E4412E] transition-all duration-500 hover:w-full transform origin-left rounded-full"></span>
-                    </>
-                  )}
-                </button>
+                </div>
               ))}
             </div>
           </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button 
-              variant="primary" 
-              size="lg" 
-              className="shadow-2xl hover:shadow-3xl transform hover:scale-110 active:scale-95 transition-all duration-500 bg-[#E4412E] hover:bg-[#6D3434] text-white font-black border-2 border-[#E4412E] hover:border-[#6D3434] px-10 py-4 text-lg rounded-2xl"
-            >
-              <span className="relative z-10">Cotizar Ahora</span>
-              <span className="absolute inset-0 bg-[#6D3434]/30 rounded-2xl scale-0 hover:scale-100 transition-transform duration-500"></span>
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-2xl"></span>
-            </Button>
-          </div>
+          <div className="hidden lg:block"></div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-[#E4412E] focus:outline-none focus:text-[#E4412E] p-4 rounded-2xl hover:bg-[#E4412E]/15 transition-all duration-500 relative group"
+              className="text-gray-700 hover:text-red-600 focus:outline-none p-2 rounded-lg hover:bg-red-50 transition-all duration-300"
             >
-              {/* Animated hamburger */}
-              <div className="relative w-8 h-8">
-                <span className={`absolute left-0 w-8 h-0.5 bg-current transition-all duration-500 ${isMenuOpen ? 'rotate-45 top-4' : 'top-2'}`}></span>
-                <span className={`absolute left-0 w-8 h-0.5 bg-current transition-all duration-500 ${isMenuOpen ? 'opacity-0' : 'top-4'}`}></span>
-                <span className={`absolute left-0 w-8 h-0.5 bg-current transition-all duration-500 ${isMenuOpen ? '-rotate-45 top-4' : 'top-6'}`}></span>
-              </div>
-              <span className="absolute inset-0 bg-[#E4412E]/25 scale-0 group-active:scale-100 transition-transform duration-200 rounded-2xl"></span>
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -106,47 +209,65 @@ const Navigation: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-black/95 backdrop-blur-3xl border-t border-[#E4412E]/30 shadow-2xl animate-in slide-in-from-top-2 duration-500">
-          <div className="px-8 py-8 space-y-4">
+        <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+          <div className="px-4 py-6 space-y-2">
             {menuItems.map((item, index) => (
-              <button
-                key={item.name}
-                onClick={() => handleSmoothScroll(item.href, item.name)}
-                className={`relative block w-full text-left px-8 py-5 rounded-2xl text-xl font-bold transition-all duration-500 overflow-hidden ${
-                  activeItem === item.name 
-                    ? 'text-[#E4412E] bg-[#E4412E]/20 shadow-2xl shadow-[#E4412E]/30' 
-                    : 'text-white hover:text-[#E4412E] hover:bg-[#E4412E]/15'
-                }`}
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <span className="relative z-10">{item.name}</span>
-                
-                {/* Active state glow effect */}
-                {activeItem === item.name && (
-                  <>
-                    <span className="absolute inset-0 bg-gradient-to-r from-[#E4412E]/20 via-[#E4412E]/30 to-[#E4412E]/20 rounded-2xl animate-pulse"></span>
-                    <span className="absolute inset-0 bg-[#E4412E]/10 rounded-2xl animate-ping"></span>
-                    <span className="absolute -inset-1 bg-gradient-to-r from-[#E4412E] via-[#E4412E] to-[#E4412E] rounded-2xl blur-sm opacity-75 animate-pulse"></span>
-                  </>
+              <div key={item.name}>
+                <button
+                  onClick={() => item.hasDropdown ? toggleDropdown(item.name) : handleSmoothScroll(item.href, item.name)}
+                  className={`relative block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 flex items-center justify-between ${
+                    activeItem === item.name 
+                      ? 'text-white bg-red-600 shadow-md' 
+                      : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <Text 
+                    variant="body" 
+                    color={activeItem === item.name ? "white" : "gray"}
+                    className="font-medium"
+                  >
+                    {item.name}
+                  </Text>
+                  {item.hasDropdown && (
+                    <ChevronDown 
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`}
+                    />
+                  )}
+                </button>
+
+                {/* Mobile Dropdown */}
+                {item.hasDropdown && activeDropdown === item.name && (
+                  <div className="mt-2 ml-4 bg-gray-50 rounded-lg p-4 space-y-4">
+                    {item.dropdownItems?.map((section, sectionIndex) => (
+                      <div key={sectionIndex} className="space-y-2">
+                        <Text variant="xs" color="gray" className="font-bold text-gray-800 text-sm uppercase tracking-wide border-b border-gray-200 pb-1">
+                          {section.title}
+                        </Text>
+                        <ul className="space-y-1">
+                          {section.items.map((subItem, itemIndex) => (
+                            <li key={itemIndex}>
+                              <button
+                                onClick={() => handleSmoothScroll('#developments', subItem)}
+                                className="flex items-center space-x-2 text-sm text-gray-600 hover:text-red-600 transition-colors duration-200 group pl-2 py-1"
+                              >
+                                <div className="w-1.5 h-1.5 border-2 border-gray-300 rounded-full group-hover:border-red-600 transition-colors duration-200"></div>
+                                <span className="group-hover:text-red-600 transition-colors duration-200">
+                                  {subItem}
+                                </span>
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 )}
-                
-                {/* Hover effect (only when not active) */}
-                {activeItem !== item.name && (
-                  <span className="absolute inset-0 bg-[#E4412E]/15 scale-0 hover:scale-100 transition-transform duration-500 rounded-2xl"></span>
-                )}
-              </button>
+              </div>
             ))}
-            <div className="pt-8 animate-in slide-in-from-bottom-2 duration-500" style={{ animationDelay: '800ms' }}>
-              <Button 
-                variant="primary" 
-                size="lg" 
-                className="w-full shadow-2xl hover:shadow-3xl transform hover:scale-105 active:scale-95 transition-all duration-500 bg-[#E4412E] hover:bg-[#6D3434] text-white font-black border-2 border-[#E4412E] hover:border-[#6D3434] px-10 py-5 text-xl rounded-2xl"
-              >
-                <span className="relative z-10">Cotizar Ahora</span>
-                <span className="absolute inset-0 bg-[#6D3434]/30 rounded-2xl scale-0 hover:scale-100 transition-transform duration-500"></span>
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-2xl"></span>
-              </Button>
-            </div>
+            <div className="pt-4" style={{ animationDelay: '600ms' }}></div>
           </div>
         </div>
       )}

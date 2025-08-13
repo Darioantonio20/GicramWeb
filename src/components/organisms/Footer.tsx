@@ -1,135 +1,105 @@
 import React from 'react';
-import { Text, ConstructionIcon, WrenchIcon, ShieldIcon, ZapIcon, PhoneIcon, EmailIcon, LocationIcon } from '../atoms';
+import { Text } from '../atoms';
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Construction, Building2 } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white relative overflow-hidden">
-      {/* Elegant Background Pattern */}
-      <div className="absolute inset-0">
-        {/* Subtle Grid Pattern */}
-        <div className="absolute inset-0 opacity-3">
-          <div className="absolute top-0 left-0 w-full h-full construction-grid"></div>
-        </div>
-        
-        {/* Elegant Floating Elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-lg mix-blend-multiply filter blur-3xl opacity-10 animate-construction-float"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-lg mix-blend-multiply filter blur-3xl opacity-10 animate-construction-float animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/5 rounded-lg mix-blend-multiply filter blur-3xl opacity-5 animate-machinery-vibrate"></div>
-      </div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div className="col-span-1 md:col-span-2 space-y-6">
-            <div>
-              <Text variant="h3" color="white" className="mb-4 font-bold tracking-wider text-white">
+    <footer className="bg-gradient-to-br from-gicram-dark to-gicram-secondary text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Logo y Descripción */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-4">
+              <Building2 className="w-8 h-8 text-gicram-primary mr-3" />
+              <Text variant="h3" color="white" className="text-2xl font-bold">
                 GICRAM
               </Text>
-              <Text variant="body" color="white" className="mb-6 opacity-90 leading-relaxed text-gray-300">
-                Líder en servicios de construcción y proyectos de infraestructura. 
-                Más de 10 años de experiencia en el sector, ofreciendo soluciones 
-                confiables y eficientes con la mejor tecnología disponible.
-              </Text>
             </div>
-            
-            <div className="flex space-x-6">
-              <a href="#" className="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-gray-100 transform hover:scale-110 transition-all duration-300 shadow-lg animate-construction-pulse">
-                <span className="sr-only">Facebook</span>
-                <svg className="h-6 w-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-                </svg>
+            <Text variant="body" color="white" className="text-gicram-tertiary mb-4 leading-relaxed">
+              Desarrollador inmobiliario comprometido con ofrecer soluciones integrales de vivienda, 
+              superando expectativas y asegurando inversiones de alta plusvalía.
+            </Text>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gicram-tertiary hover:text-gicram-primary transition-colors duration-300">
+                <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-gray-100 transform hover:scale-110 transition-all duration-300 shadow-lg animate-construction-pulse">
-                <span className="sr-only">Instagram</span>
-                <svg className="h-6 w-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
-                </svg>
+              <a href="#" className="text-gicram-tertiary hover:text-gicram-primary transition-colors duration-300">
+                <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="w-12 h-12 bg-white rounded-xl flex items-center justify-center hover:bg-gray-100 transform hover:scale-110 transition-all duration-300 shadow-lg animate-construction-pulse">
-                <span className="sr-only">Twitter</span>
-                <svg className="h-6 w-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                </svg>
+              <a href="#" className="text-gicram-tertiary hover:text-gicram-primary transition-colors duration-300">
+                <Twitter className="w-6 h-6" />
               </a>
             </div>
           </div>
 
-          {/* Services */}
-          <div className="space-y-6">
-            <Text variant="h4" color="white" className="mb-6 font-bold text-white">
-              Servicios
+          {/* Enlaces Rápidos */}
+          <div>
+            <Text variant="h4" color="white" className="text-lg font-bold mb-4 text-gicram-primary">
+              Enlaces Rápidos
             </Text>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="w-2 h-2 bg-[#E4412E] rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
-                  <ConstructionIcon size="sm" className="mr-2 text-white" />
-                  Construcción
+                <a href="#" className="text-gicram-tertiary hover:text-gicram-primary transition-colors duration-300">
+                  Inicio
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="w-2 h-2 bg-[#E4412E] rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
-                  <WrenchIcon size="sm" className="mr-2 text-white" />
-                  Remodelación
+                <a href="#" className="text-gicram-tertiary hover:text-gicram-primary transition-colors duration-300">
+                  Opciones de Crédito
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="w-2 h-2 bg-[#E4412E] rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
-                  <ShieldIcon size="sm" className="mr-2 text-white" />
-                  Mantenimiento
+                <a href="#" className="text-gicram-tertiary hover:text-gicram-primary transition-colors duration-300">
+                  Desarrollos
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group">
-                  <span className="w-2 h-2 bg-[#E4412E] rounded-full mr-3 group-hover:scale-125 transition-transform duration-200 animate-construction-pulse"></span>
-                  <ZapIcon size="sm" className="mr-2 text-white" />
-                  Consultoría
+                <a href="#" className="text-gicram-tertiary hover:text-gicram-primary transition-colors duration-300">
+                  Sobre Nosotros
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
-          <div className="space-y-6">
-            <Text variant="h4" color="white" className="mb-6 font-bold text-white">
+          {/* Información de Contacto */}
+          <div>
+            <Text variant="h4" color="white" className="text-lg font-bold mb-4 text-gicram-primary">
               Contacto
             </Text>
-            <ul className="space-y-4">
-              <li className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                <PhoneIcon size="sm" className="mr-2 text-[#E4412E]" />
-                +52 (55) 1234-5678
-              </li>
-              <li className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                <EmailIcon size="sm" className="mr-2 text-[#E4412E]" />
-                info@gicram.com
-              </li>
-              <li className="text-gray-300 flex items-start">
-                <LocationIcon size="sm" className="mr-2 mt-1 text-[#E4412E]" />
-                <div>
-                  Av. Industrial 123<br />
-                  Col. Industrial<br />
-                  CDMX, México
-                </div>
-              </li>
-            </ul>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-gicram-primary" />
+                <Text variant="body" color="white" className="text-gicram-tertiary">
+                  +52 961 XXX XXXX
+                </Text>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-gicram-primary" />
+                <Text variant="body" color="white" className="text-gicram-tertiary">
+                  info@gicram.com
+                </Text>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-gicram-primary" />
+                <Text variant="body" color="white" className="text-gicram-tertiary">
+                  Chiapas, México
+                </Text>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
+        {/* Línea divisoria */}
+        <div className="border-t border-gicram-secondary-light/30 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <Text variant="caption" color="gray" className="text-gray-400">
+            <Text variant="body" color="white" className="text-gicram-tertiary text-sm">
               © 2024 GICRAM. Todos los derechos reservados.
             </Text>
-            <div className="flex space-x-8 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-[#E4412E] transition-colors duration-300 text-sm">
-                Política de Privacidad
-              </a>
-              <a href="#" className="text-gray-400 hover:text-[#E4412E] transition-colors duration-300 text-sm">
-                Términos de Servicio
-              </a>
+            <div className="flex items-center mt-4 md:mt-0">
+              <Construction className="w-4 h-4 mr-2 text-gicram-primary" />
+              <Text variant="body" color="white" className="text-gicram-tertiary text-sm">
+                Desarrollado con pasión por la excelencia
+              </Text>
             </div>
           </div>
         </div>

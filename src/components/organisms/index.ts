@@ -1,8 +1,6 @@
+export { default as Footer } from './Footer';
 export { default as Hero } from './Hero';
-export { default as About } from './About';
-export { default as Services } from './Services';
-export { default as Projects } from './Projects';
-export { default as Equipment } from './Equipment';
-export { default as CompanyInfo } from './CompanyInfo';
-export { default as Contact } from './Contact';
-export { default as Footer } from './Footer'; 
+export { default as CreditOptions } from './CreditOptions';
+export { default as Developments } from './Developments';
+export { default as Team } from './Team';
+export { default as About } from './About'; 

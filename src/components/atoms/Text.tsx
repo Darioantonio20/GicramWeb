@@ -2,7 +2,7 @@ import React from 'react';
 
 interface TextProps {
   children: React.ReactNode;
-  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'caption' | 'label';
+  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'caption' | 'label' | 'xs';
   color?: 'primary' | 'secondary' | 'white' | 'yellow' | 'gray';
   className?: string;
 }
@@ -20,7 +20,8 @@ const Text: React.FC<TextProps> = ({
     h4: 'text-xl md:text-2xl font-semibold leading-tight',
     body: 'text-base leading-relaxed',
     caption: 'text-sm leading-relaxed',
-    label: 'text-sm font-medium'
+    label: 'text-sm font-medium',
+    xs: 'text-xs font-bold leading-tight'
   };
   
   const colors = {
@@ -50,6 +51,9 @@ const Text: React.FC<TextProps> = ({
     return <label className={classes}>{children}</label>;
   }
   if (variant === 'caption') {
+    return <p className={classes}>{children}</p>;
+  }
+  if (variant === 'xs') {
     return <p className={classes}>{children}</p>;
   }
   
