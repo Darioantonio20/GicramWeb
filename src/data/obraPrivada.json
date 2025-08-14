@@ -1,69 +1,324 @@
 {
   "titulo": "OBRA PRIVADA",
-  "descripcion": "En Gicram contribuimos al éxito de nuestros clientes manteniendo un interés constante por establecer alianzas comerciales de largo plazo, asegurando altos estándares de calidad y la generación de soluciones técnico-económicas de alto valor agregado.",
+  "descripcion": "En GICRAM contribuimos al éxito de nuestros clientes manteniendo un interés constante por establecer alianzas comerciales de largo plazo, asegurando altos estándares de calidad y la generación de soluciones técnico-económicas de alto valor agregado.",
   "proyectos": [
     {
-      "ubicacion": "Tuxtla Gutiérrez",
+      "ubicacion": "Tuxtla Gutiérrez, Chiapas",
       "proyectos": [
-        "Residencia Country La Cima",
-        "Proyecto Oficinas Cowork"
+        {
+          "nombre": "Residencia Country Residencial La Cima",
+          "descripcion": "Residencia privada de alto nivel en exclusivo fraccionamiento",
+          "imagenes": ["https://i.ibb.co/Y7TC7Y6y/Captura-de-pantalla-2025-08-12-a-la-s-1-46-03-p-m.png", "/images/projects/placeholder2.jpg", "/images/projects/placeholder3.jpg"]
+        },
+        {
+          "nombre": "Centro de Oficinas Cowork en Plaza Vía Park",
+          "descripcion": "Centro de oficinas compartidas con espacios modernos y funcionales",
+          "imagenes": ["/images/projects/placeholder4.jpg", "/images/projects/placeholder5.jpg"]
+        }
       ]
     },
     {
-      "ubicacion": "Guadalajara",
+      "ubicacion": "Guadalajara, Jalisco",
       "proyectos": [
-        "Centro Histórico",
-        "Las Américas",
-        "Vallarta",
-        "Tlaquepaque"
-      ]
-    },
-    {
-      "ubicacion": "Veracruz",
-      "proyectos": []
-    },
-    {
-      "ubicacion": "Estado de México",
-      "proyectos": [
-        "Ecatepec",
-        "Coacalco",
-        "Cuautitlán Izcalli"
+        {
+          "nombre": "UNIVER Centro Histórico - Espacios educativos multifuncionales",
+          "descripcion": "Centro educativo con espacios versátiles para diferentes disciplinas",
+          "imagenes": ["imgObraPrivada6.jpg", "imgObraPrivada7.jpg"]
+        },
+        {
+          "nombre": "UNIVER Tlaquepaque - Centros multifuncionales de Ciencias de la Salud",
+          "descripcion": "Instalaciones especializadas para ciencias de la salud",
+          "imagenes": ["imgObraPrivada8.jpg", "imgObraPrivada9.jpg"]
+        },
+        {
+          "nombre": "UNIVER Vallarta - Laboratorios de Robótica",
+          "descripcion": "Laboratorios de última generación para robótica y tecnología",
+          "imagenes": ["imgObraPrivada10.jpg", "imgObraPrivada11.jpg"]
+        },
+        {
+          "nombre": "Instituto el Diseñador de la Moda - Laboratorios de Robótica (Centro Histórico)",
+          "descripcion": "Laboratorios especializados en el centro histórico de Guadalajara",
+          "imagenes": ["imgObraPrivada12.jpg"]
+        },
+        {
+          "nombre": "Instituto el Diseñador de la Moda - Laboratorios de Robótica (Las Américas)",
+          "descripcion": "Laboratorios de robótica en zona Las Américas",
+          "imagenes": ["imgObraPrivada13.jpg", "imgObraPrivada14.jpg"]
+        },
+        {
+          "nombre": "Instituto el Diseñador de la Moda - Laboratorios de Robótica (Tlaquepaque)",
+          "descripcion": "Instalaciones de robótica en Tlaquepaque",
+          "imagenes": ["imgObraPrivada15.jpg"]
+        },
+        {
+          "nombre": "Lamar Mexicana AC - Hospital Simulador Campus Lamar Vallarta",
+          "descripcion": "Hospital simulador para entrenamiento médico",
+          "imagenes": ["imgObraPrivada16.jpg", "imgObraPrivada17.jpg", "imgObraPrivada18.jpg"]
+        }
       ]
     },
     {
       "ubicacion": "Ciudad de México",
       "proyectos": [
-        "La Villa",
-        "Berlín",
-        "Zaragoza",
-        "Ermita Iztapalapa"
+        {
+          "nombre": "Nacer Global - Centros Multifuncionales de Ciencias de la Salud (Tlalpan)",
+          "descripcion": "Centros de salud multifuncionales en Tlalpan",
+          "imagenes": ["imgObraPrivada19.jpg", "imgObraPrivada20.jpg"]
+        },
+        {
+          "nombre": "Nacer Global - Centros Multifuncionales de Ciencias de la Salud (La Villa)",
+          "descripcion": "Instalaciones de salud en La Villa",
+          "imagenes": ["imgObraPrivada21.jpg"]
+        },
+        {
+          "nombre": "Nacer Global - Centros Multifuncionales de Ciencias de la Salud (Berlín)",
+          "descripcion": "Centros de salud en Campus Berlín",
+          "imagenes": ["imgObraPrivada22.jpg", "imgObraPrivada23.jpg"]
+        },
+        {
+          "nombre": "Nacer Global - Centros Multifuncionales de Ciencias de la Salud (Zaragoza)",
+          "descripcion": "Instalaciones médicas en Campus Zaragoza",
+          "imagenes": ["imgObraPrivada24.jpg"]
+        },
+        {
+          "nombre": "Nacer Global - Centros Multifuncionales de Ciencias de la Salud (Ermita Iztapalapa)",
+          "descripcion": "Centros de salud en Ermita Iztapalapa",
+          "imagenes": ["imgObraPrivada25.jpg", "imgObraPrivada26.jpg"]
+        },
+        {
+          "nombre": "ICEL Universidad - Laboratorios de Robótica (La Villa)",
+          "descripcion": "Laboratorios de robótica en La Villa",
+          "imagenes": ["imgObraPrivada27.jpg"]
+        },
+        {
+          "nombre": "ICEL Universidad - Laboratorios de Robótica (Tlalpan)",
+          "descripcion": "Laboratorios tecnológicos en Tlalpan",
+          "imagenes": ["imgObraPrivada28.jpg", "imgObraPrivada29.jpg"]
+        },
+        {
+          "nombre": "ICEL Universidad - Laboratorios Quirúrgicos (La Villa)",
+          "descripcion": "Laboratorios quirúrgicos especializados en La Villa",
+          "imagenes": ["imgObraPrivada30.jpg"]
+        },
+        {
+          "nombre": "ICEL Universidad - Laboratorios Quirúrgicos (Tlalpan)",
+          "descripcion": "Instalaciones quirúrgicas en Tlalpan",
+          "imagenes": ["imgObraPrivada31.jpg", "imgObraPrivada32.jpg"]
+        }
+      ]
+    },
+    {
+      "ubicacion": "Estado de México",
+      "proyectos": [
+        {
+          "nombre": "Universidad Educativa de Ecatepec - Aulas y Laboratorios",
+          "descripcion": "Aulas y laboratorios educativos en Ecatepec",
+          "imagenes": ["imgObraPrivada33.jpg", "imgObraPrivada34.jpg"]
+        },
+        {
+          "nombre": "Universidad Educativa de Ecatepec - Laboratorios de Robótica",
+          "descripcion": "Laboratorios de robótica en Ecatepec",
+          "imagenes": ["imgObraPrivada35.jpg"]
+        },
+        {
+          "nombre": "ICEL Universidad - Laboratorios de Robótica (Coacalco)",
+          "descripcion": "Laboratorios tecnológicos en Coacalco",
+          "imagenes": ["imgObraPrivada36.jpg", "imgObraPrivada37.jpg"]
+        },
+        {
+          "nombre": "ICEL Universidad - Laboratorios Quirúrgicos (Coacalco)",
+          "descripcion": "Laboratorios quirúrgicos en Coacalco",
+          "imagenes": ["imgObraPrivada38.jpg"]
+        },
+        {
+          "nombre": "ICEL Universidad - Laboratorios de Robótica (Cuautitlán Izcalli)",
+          "descripcion": "Laboratorios de robótica en Cuautitlán Izcalli",
+          "imagenes": ["imgObraPrivada39.jpg", "imgObraPrivada40.jpg"]
+        }
+      ]
+    },
+    {
+      "ubicacion": "Veracruz",
+      "proyectos": [
+        {
+          "nombre": "Centro de Aprendizaje Montevideo SC - Ciencias de la Salud (Acapulco)",
+          "descripcion": "Centro de aprendizaje para ciencias de la salud en Acapulco",
+          "imagenes": ["imgObraPrivada41.jpg", "imgObraPrivada42.jpg"]
+        },
+        {
+          "nombre": "Universidad Americana de Acapulco - Espacios Educativos",
+          "descripcion": "Espacios educativos en la Universidad Americana de Acapulco",
+          "imagenes": ["imgObraPrivada43.jpg"]
+        },
+        {
+          "nombre": "CEMAS Coatzacoalcos - Rehabilitación de Planta de Tratamiento (Villa de Allende)",
+          "descripcion": "Rehabilitación de planta de tratamiento en Villa de Allende",
+          "imagenes": ["imgObraPrivada44.jpg", "imgObraPrivada45.jpg"]
+        }
       ]
     },
     {
       "ubicacion": "Aguascalientes",
-      "proyectos": []
+      "proyectos": [
+        {
+          "nombre": "UNIDEP - Centros Multifuncionales de Ciencias de la Salud",
+          "descripcion": "Centros de salud multifuncionales en Aguascalientes",
+          "imagenes": ["imgObraPrivada46.jpg", "imgObraPrivada47.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Laboratorios de Robótica",
+          "descripcion": "Laboratorios de robótica en Aguascalientes",
+          "imagenes": ["imgObraPrivada48.jpg"]
+        }
+      ]
     },
     {
       "ubicacion": "Querétaro",
-      "proyectos": []
+      "proyectos": [
+        {
+          "nombre": "UNIDEP - Centros Multifuncionales de Ciencias de la Salud",
+          "descripcion": "Centros de salud en Querétaro",
+          "imagenes": ["imgObraPrivada49.jpg", "imgObraPrivada50.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Laboratorios de Robótica",
+          "descripcion": "Laboratorios de robótica en Querétaro",
+          "imagenes": ["imgObraPrivada51.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Aulas Educativas",
+          "descripcion": "Aulas educativas en Querétaro",
+          "imagenes": ["imgObraPrivada52.jpg", "imgObraPrivada53.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Remodelación de Aulas y Áreas Administrativas",
+          "descripcion": "Remodelación de espacios educativos en Querétaro",
+          "imagenes": ["imgObraPrivada54.jpg"]
+        }
+      ]
     },
     {
-      "ubicacion": "Culiacán",
-      "proyectos": []
+      "ubicacion": "Culiacán, Sinaloa",
+      "proyectos": [
+        {
+          "nombre": "UNIDEP - Centros Multifuncionales de Ciencias de la Salud",
+          "descripcion": "Centros de salud en Culiacán",
+          "imagenes": ["imgObraPrivada55.jpg", "imgObraPrivada56.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Laboratorios de Robótica",
+          "descripcion": "Laboratorios de robótica en Culiacán",
+          "imagenes": ["imgObraPrivada57.jpg"]
+        }
+      ]
     },
     {
-      "ubicacion": "Mexicali",
-      "proyectos": []
+      "ubicacion": "Mexicali, Baja California",
+      "proyectos": [
+        {
+          "nombre": "UNIDEP - Aulas y Biblioteca",
+          "descripcion": "Aulas y biblioteca en Mexicali",
+          "imagenes": ["imgObraPrivada58.jpg", "imgObraPrivada59.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Centros Multifuncionales de Ciencias de la Salud",
+          "descripcion": "Centros de salud en Mexicali",
+          "imagenes": ["imgObraPrivada60.jpg", "imgObraPrivada61.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Laboratorios de Robótica",
+          "descripcion": "Laboratorios de robótica en Mexicali",
+          "imagenes": ["imgObraPrivada62.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Aulas Educativas",
+          "descripcion": "Aulas educativas en Mexicali",
+          "imagenes": ["imgObraPrivada63.jpg", "imgObraPrivada64.jpg"]
+        }
+      ]
     },
     {
-      "ubicacion": "Saltillo",
-      "proyectos": []
+      "ubicacion": "Saltillo, Coahuila",
+      "proyectos": [
+        {
+          "nombre": "UNIDEP - Centros Multifuncionales de Ciencias de la Salud",
+          "descripcion": "Centros de salud en Saltillo",
+          "imagenes": ["imgObraPrivada65.jpg", "imgObraPrivada66.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Laboratorios de Robótica",
+          "descripcion": "Laboratorios de robótica en Saltillo",
+          "imagenes": ["imgObraPrivada67.jpg"]
+        }
+      ]
     },
     {
       "ubicacion": "Chihuahua",
-      "proyectos": []
+      "proyectos": [
+        {
+          "nombre": "UNIDEP - Centros Multifuncionales de Ciencias de la Salud",
+          "descripcion": "Centros de salud en Chihuahua",
+          "imagenes": ["imgObraPrivada68.jpg", "imgObraPrivada69.jpg"]
+        },
+        {
+          "nombre": "UNIDEP - Laboratorios de Robótica",
+          "descripcion": "Laboratorios de robótica en Chihuahua",
+          "imagenes": ["imgObraPrivada70.jpg"]
+        }
+      ]
     }
   ],
+  "desarrollosHabitacionales": {
+    "titulo": "DESARROLLOS HABITACIONALES",
+    "proyectos": [
+      {
+        "nombre": "Rinconada del Carmen Tuxtla Gutiérrez",
+        "ubicacion": "Tuxtla Gutiérrez, Chiapas",
+        "detalles": [
+          "Casas Cuádruples de 60 m² (24 unidades)",
+          "Casas de 2 Niveles 108 m² (08 unidades)"
+        ],
+        "imagenes": ["imgDesarrollo1.jpg", "imgDesarrollo2.jpg", "imgDesarrollo3.jpg", "imgDesarrollo4.jpg"]
+      },
+      {
+        "nombre": "Casas Duplex Akishino Tapachula",
+        "ubicacion": "Tapachula, Chiapas",
+        "detalles": [
+          "Casas Cuádruples de 58 m² (16 unidades)"
+        ],
+        "imagenes": ["imgDesarrollo5.jpg", "imgDesarrollo6.jpg", "imgDesarrollo7.jpg"]
+      },
+      {
+        "nombre": "Rincón del Carmen Copan Tapachula",
+        "ubicacion": "Tapachula, Chiapas",
+        "detalles": [
+          "Casas de 1 Nivel 90 m² (14 unidades)"
+        ],
+        "imagenes": ["imgDesarrollo8.jpg", "imgDesarrollo9.jpg"]
+      },
+      {
+        "nombre": "Rincón del Carmen Tikal Tapachula",
+        "ubicacion": "Tapachula, Chiapas",
+        "detalles": [
+          "Casas de 1 Nivel 60 m² (25 unidades)"
+        ],
+        "imagenes": ["imgDesarrollo10.jpg", "imgDesarrollo11.jpg", "imgDesarrollo12.jpg"]
+      }
+    ]
+  },
+  "servicios": {
+    "titulo": "SERVICIOS QUE OFERTAMOS",
+    "lista": [
+      "Edificaciones y Construcciones Obra Civil",
+      "Arrendamiento de Maquinaria y Equipo Industrial",
+      "Reparación y Mantenimiento de Edificios",
+      "Maquinaria para la Construcción",
+      "Proyectos Ejecutivos Arquitectónicos",
+      "Supervisión de Obra",
+      "Presupuestos",
+      "Desarrollos Inmobiliarios"
+    ]
+  },
   "compromiso": {
     "titulo": "Nuestro Compromiso",
     "descripcion": "Cada proyecto de obra privada en GICRAM está diseñado para superar las expectativas de nuestros clientes, ofreciendo espacios habitacionales y comerciales que aseguran una excelente inversión a mediano y largo plazo.",

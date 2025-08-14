@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text } from '../atoms';
+import { Building2, Home } from 'lucide-react';
 
 interface DevelopmentsProps {
   onViewChange: (view: 'obra-privada' | 'obra-publica') => void;
@@ -22,7 +23,7 @@ const Developments: React.FC<DevelopmentsProps> = ({ onViewChange }) => {
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gicram-tertiary">
             <div className="text-center mb-8">
               <div className="w-20 h-20 bg-gradient-to-br from-gicram-secondary to-gicram-secondary-light rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Text variant="h3" color="white" className="text-3xl">🏛️</Text>
+                <Building2 className="w-10 h-10 text-white" />
               </div>
               <Text variant="h3" color="gray" className="text-2xl lg:text-3xl font-bold text-gicram-secondary mb-4">
                 OBRAS PÚBLICAS
@@ -43,7 +44,7 @@ const Developments: React.FC<DevelopmentsProps> = ({ onViewChange }) => {
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gicram-tertiary">
             <div className="text-center mb-8">
               <div className="w-20 h-20 bg-gradient-to-br from-gicram-primary to-gicram-primary-light rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Text variant="h3" color="white" className="text-3xl">🏠</Text>
+                <Home className="w-10 h-10 text-white" />
               </div>
               <Text variant="h3" color="gray" className="text-2xl lg:text-3xl font-bold text-gicram-secondary mb-4">
                 OBRAS PRIVADAS

@@ -1,0 +1,114 @@
+{
+  "antecedentes": {
+    "titulo": "ANTECEDENTES",
+    "descripcion": "GICRAM CONSTRUCCIONES S.A DE CV se constituye en el estado de Chiapas el día 16 de junio del 2016, con Registro Federal de Contribuyentes GCO160630UI6, Registro Patronal ante el IMSS No. A6534317107, desde el año 2008 el equipo técnico y administrativo de Gicram ha participado y tenido la experiencia de liderar proyectos y obras de gran relevancia en distintas especialidades.",
+    "descripcionAdicional": "En los últimos años nuestro equipo ha ocupado cargos gerenciales de alta dirección y de alta responsabilidad técnica a través de superintendencias de obra, representaciones Técnicas, Residencias de obras y Directores Responsables de Obra en diversas empresas de las que formo parte y/o mantuvo alguna sociedad.",
+    "especializacion": "En GICRAM nos hemos especializado en proyectos de construcción, consolidándonos como una empresa seria y responsable con profesionistas altamente calificados y una infraestructura que nos permite ofrecer servicios de calidad a nuestros clientes."
+  },
+  "experiencia": {
+    "titulo": "EXPERIENCIA",
+    "descripcion": "Somos una empresa joven que cuenta con 9 años en el ramo de la construcción y una gran experiencia obtenida a través de su Representante Técnico y Legal, quien desde el año 2009 ha liderado proyectos de infraestructura con contratos de obra pública en la Secretaria de Comunicaciones y Transportes, CONAGUA, INIFECH y SINFRA en el estado de Chiapas y otras entidades del país.",
+    "descripcionAdicional": "Estos años de trabajo nos han otorgado una gran experiencia en proyectos de distinta índole desde la edificación de Hospitales llave en Mano hasta Infraestructura Carretera e Hidráulica, sin dejar de lado nuestra experiencia en desarrollos inmobiliarios de Vivienda.",
+    "servicios": "En GICRAM Construcciones, nos dedicamos a la realización de todo tipo de obra Civil, Proyectos ejecutivos arquitectónicos, supervisión de obra, presupuestos, Desarrollos Inmobiliarios, renta de Maquinaria y Equipo.",
+    "garantia": "Garantizamos trabajos de calidad ya que nuestro personal se capacita constantemente en aspectos técnicos y en mejores prácticas administrativas para el desarrollo de proyectos, nunca dejamos de actualizarnos para ofrecer el mejor servicio."
+  },
+  "acercaDeNosotros": {
+    "titulo": "ACERCA DE NOSOTROS",
+    "descripcion": "GICRAM es una inmobiliaria mexicana con el fiel compromiso de dar soluciones integrales a las necesidades de vivienda.",
+    "compromiso": "Trabajamos regidos bajo valores encaminados a otorgarles a nuestros clientes el acceso a mejores estándares de vida y a realizar inversiones de alta plusvalía."
+  },
+  "mision": {
+    "titulo": "MISIÓN",
+    "descripcion": "Reconocer y traducir las necesidades reales y aspiraciones de nuestros clientes para desarrollar espacios habitacionales que superen sus expectativas y les aseguren una excelente inversión a mediano y largo plazo."
+  },
+  "vision": {
+    "titulo": "VISIÓN",
+    "descripcion": "Ser el mayor constructor y desarrollador inmobiliario del sur de México, reconocido por escalar el nivel de vida de nuestros clientes."
+  },
+  "valores": {
+    "titulo": "VALORES",
+    "valores": [
+      {
+        "titulo": "COMPROMISO",
+        "descripcion": "Desarrollamos productos con materiales y métodos de construcción que garanticen una plusvalía en la inversión de nuestros clientes y que armonicen con la conservación del medio ambiente."
+      },
+      {
+        "titulo": "PASIÓN",
+        "descripcion": "Atendemos y cubrimos necesidades reales de nuestros clientes con gran determinación, entregando todo nuestro conocimiento, capacidad y corazón en cada proyecto que emprendemos."
+      },
+      {
+        "titulo": "INNOVACIÓN",
+        "descripcion": "Nuestro esquema de trabajo, servicio y diseño de producto desafían lo convencional en el sector."
+      },
+      {
+        "titulo": "DISRUPTIVOS",
+        "descripcion": "Consistentemente buscamos generar enormes cambios en nuestro modelo de negocio inmobiliario."
+      }
+    ]
+  },
+  "datosGenerales": {
+    "titulo": "DATOS GENERALES",
+    "informacion": {
+      "razonSocial": "GICRAM CONSTRUCCIONES SA DE CV",
+      "directorGeneral": "RENE G. TRESPALACIOS TORRES",
+      "ciudad": "TUXTLA GUTIERREZ, CHIAPAS",
+      "ubicacion": "CARRETERA INT. Km. 1078 NUM. 353, COL. PLAN DE AYALA CP. 29020",
+      "telefono": "961 11 29990",
+      "rfc": "GCO160630UI6",
+      "repse": "FOLIO 155699",
+      "correo": "trespalaciost@gmail.com"
+    }
+  },
+  "servicios": {
+    "titulo": "SERVICIOS QUE OFERTAMOS",
+    "lista": [
+      "EDIFICACIONES Y CONSTRUCCIONES OBRA CIVIL",
+      "ARRENDAMIENTO DE MAQUINARIA Y EQUIPO INDUSTRIAL",
+      "REPARACION Y MANTENIMIENTO DE EDIFICIOS",
+      "MAQUINARIA PARA LA CONSTRUCCION",
+      "PROYECTOS EJECUTIVOS ARQUITECTÓNICOS",
+      "SUPERVISIÓN DE OBRA",
+      "PRESUPUESTOS",
+      "DESARROLLOS INMOBILIARIOS"
+    ]
+  },
+  "equiposMaquinaria": {
+    "titulo": "EQUIPOS Y MAQUINARIA",
+    "equipos": [
+      "1 Retroexcavadora CAT420D",
+      "1 Retroexcavadora CAT416E",
+      "1 Excavadora CAT320C",
+      "1 Motoconformadora CAT12H",
+      "1 Vibrocompactador Dynapac 12 Ton",
+      "1 Rodillo Wacker 1200Kg",
+      "1 Rodillo New Holland 7 Ton",
+      "6 Bailarinas",
+      "8 Revolvedoras",
+      "1 Martillo retroexcavadora",
+      "1 Camión 3 Ton F350 Súper Duty",
+      "3 Nissan P300",
+      "1 Mitsubishi L200 4x4",
+      "1 Vehículo compacto"
+    ]
+  },
+  "principalesClientes": {
+    "titulo": "PRINCIPALES CLIENTES",
+    "clientes": [
+      "GRUPO NACER GLOBAL",
+      "ICEL UNIVERSIDAD",
+      "CENTRO SCT CHIAPAS",
+      "INFONAVIT",
+      "ISSSTE",
+      "UNIVERSIDAD DEL DESARROLLO PROFESIONAL SC (UNIDEP)",
+      "INSTITUTO EL DISEÑADOR DE LA MODA, SC",
+      "LAMAR MEXICANA AC",
+      "UNIVER",
+      "UNIVERSIDAD EDUCATIVA DE ECATEPEC",
+      "CENTRO DE APRENDIZAJE MONTEVIDEO SC"
+    ]
+  },
+  "experienciaPersonal": {
+    "titulo": "EXPERIENCIA DEL PERSONAL EN OBRA PÚBLICA",
+    "descripcion": "En los últimos 15 años nuestro equipo ha ocupado cargos gerenciales y de alta responsabilidad técnica en diversas empresas, adquiriendo una amplia experiencia en Obra Pública a través de superintendencias, residencias, así como directores Responsables de Obra."
+  }
+}

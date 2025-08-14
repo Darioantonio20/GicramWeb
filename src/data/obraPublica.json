@@ -1,85 +1,182 @@
 {
   "titulo": "OBRA PÚBLICA",
-  "descripcion": "El Equipo técnico y administrativo que conforma Gicram Construcciones ha participado y tenido la experiencia de liderar proyectos y obras de gran relevancia en distintas especialidades.",
+  "descripcion": "El Equipo técnico y administrativo que conforma GICRAM Construcciones ha participado y tenido la experiencia de liderar proyectos y obras de gran relevancia en distintas especialidades.",
   "descripcionAdicional": "En los últimos años nuestro equipo ha ocupado cargos gerenciales de Alta Dirección y de Alta Responsabilidad Técnica a través de superintendencias de obra, Representaciones Técnicas, Residencias de Obra y como Directores Responsables de Obra en diversas empresas de las que formo parte y/o mantuvo sociedad.",
   "categorias": [
     {
       "titulo": "Obras Hidráulicas",
       "descripcion": "Sistemas de agua potable, captación pluvial y protección marginal",
+      "icono": "droplets",
       "proyectos": [
-        "Sectorización de Distritos Hidrométricos. Tuxtla Gtz, Chis Seinfra",
-        "Rehabilitación del sistema de Agua Potable, Obra de Captación, Conducción y red de distribución con tomas domiciliarias. Tonala, Chis. Seinfra",
-        "Construcción de Sistema de Agua Potable por Gravedad, tanques, cajas rompedoras y línea de conducción, Mazapa de Madero, Chis. Seinfra Chiapas",
-        "Construcción del sistema de Agua Potable, consistente en 199 tanques de captación pluvial en la localidad de Golonchan Viejo, Sitala, Chis. Seinfra Chiapas",
-        "Construcción de Protección Marginal en tramos dispersos en el rio Huehuetán, Carretera Fed. 200. Huehuetán, Chis. CONAGUA Chiapas",
-        "Sobreelevación del Bordo Camino Margen derecho del Rio Huixtla. Huixtla, Chis. CONAGUA Chiapas"
+        {
+          "nombre": "Rehabilitación del Sistema de Agua Potable, Obra de captación y red de distribución",
+          "descripcion": "Municipio de Tonalá, Chiapas",
+          "imagenes": ["imgObraPublica1.jpg", "imgObraPublica2.jpg", "imgObraPublica3.jpg"]
+        },
+        {
+          "nombre": "Construcción de Sistema de Agua Potable por Gravedad",
+          "descripcion": "Localidad de Libertad Frontera, Municipio de Mazapa de Madero, Chiapas",
+          "imagenes": ["imgObraPublica4.jpg", "imgObraPublica5.jpg"]
+        },
+        {
+          "nombre": "Construcción de Protección Marginal en tramos dispersos del rio Huehuetán",
+          "descripcion": "Huehuetán, Chiapas. CONAGUA Chiapas",
+          "imagenes": ["imgObraPublica6.jpg", "imgObraPublica7.jpg"]
+        },
+        {
+          "nombre": "Sobreelevación del Bordo Camino Margen derecho del Rio Huixtla",
+          "descripcion": "Huixtla, Chiapas. CONAGUA Chiapas",
+          "imagenes": ["imgObraPublica8.jpg"]
+        }
       ]
     },
     {
       "titulo": "Obras de Saneamiento",
       "descripcion": "Sistemas de alcantarillado, plantas de tratamiento y limpieza de ríos",
+      "icono": "wrench",
       "proyectos": [
-        "Construcción del sistema de alcantarillado sanitario consistente en 3 colectores, emisor general y descargas domiciliarias a realizarse en la localidad de Majastic, Sabanilla, Chis. Dependencia Seinfra Chiapas.",
-        "Limpieza y Desazolve del Rio Chilapilla para restituir su sección hidráulica, incluye puente estructural de cruce vehicular, Municipio de Centro, Tabasco dependencia CONAGUA Tabasco.",
-        "Construcción del Sistema de Alcantarillado en Puerto Arista, Chis Sopyc",
-        "Construcción del Sistema de Saneamiento, (Planta de Tratamiento) en Puerto Arista, Chis Sopyc",
-        "Rehabilitación de la Planta de Tratamiento en el Municipio de Villa de Allende, Coatzacoalcos, Ver. CEMAS"
+        {
+          "nombre": "Construcción del sistema de alcantarillado sanitario",
+          "descripcion": "Localidad de Majastic, del municipio de Sabanilla, Chiapas",
+          "imagenes": ["imgObraPublica9.jpg", "imgObraPublica10.jpg", "imgObraPublica11.jpg"]
+        },
+        {
+          "nombre": "Construcción de la red de drenaje con 75 descargas domiciliarias y planta de tratamiento",
+          "descripcion": "Localidad de Atoyac Naylum, Sabanilla, Chiapas",
+          "imagenes": ["imgObraPublica12.jpg", "imgObraPublica13.jpg"]
+        },
+        {
+          "nombre": "Rehabilitación de la Planta de Tratamiento en el Municipio de Villa de Allende",
+          "descripcion": "Coatzacoalcos, Veracruz. CEMAS Coatzacoalcos",
+          "imagenes": ["imgObraPublica14.jpg", "imgObraPublica15.jpg"]
+        }
       ]
     },
     {
       "titulo": "Infraestructura Vial y Carretera",
       "descripcion": "Pavimentación, reconstrucción, puentes y obras de drenaje",
+      "icono": "road",
       "proyectos": [
-        "Reconstrucción del Camino: El Porvenir – Siltepec tramo Km 0+000 al Km 23+000, terracerías, Pavimentos y obras de drenaje. Siltepec, Chis. Dependencia Dependencia Seinfra Chiapas",
-        "Pavimentación de calles de Concreto hidráulico Col. 6 de Junio, Tuxtla Gtz, Chis.",
-        "conservación de la superficie de Rodamiento, revestimiento con material liquido de compuesto orgánico sulfatado. Municipio de Oxkutzcab, Yucatán. SCT Yucatan",
-        "Modernización de la carretera Tuxtla Gtz, Chiapa de Corzo Km 3+101 al 3+544. Dependencia Sopyc Chiapas.",
-        "Reconstrucción del Camino: Escuintla – El Triunfo tramo, Km 0+000 al Km 15+800, terracerías, Pavimentos y obras de drenaje. Escuintla, Chis. Dependencia Seinfra Chiapas",
-        "Reconstrucción de terracerías mediante refinamiento y revestimiento, obras de drenaje de los caminos La Esperanza - España en el Municipio de Pijijiapan. Chis dependencia SCT Chiapas",
-        "Reconstrucción del Puente Moba de 30ml, Ubicado en el Km. 17+000, Chapultenango, Chiapas"
+        {
+          "nombre": "Reconstrucción de terracerías mediante refinamiento, revestimiento y reconstrucción de obras de drenaje",
+          "descripcion": "Municipio de Pijijiapan, Chiapas. SCT Chiapas",
+          "imagenes": ["imgObraPublica16.jpg", "imgObraPublica17.jpg", "imgObraPublica18.jpg"]
+        },
+        {
+          "nombre": "Conservación de la superficie de Rodamiento",
+          "descripcion": "Municipio de Oxkutzcab, Yucatán. SCT Yucatán",
+          "imagenes": ["imgObraPublica19.jpg", "imgObraPublica20.jpg"]
+        },
+        {
+          "nombre": "Reconstrucción del Camino Escuintla - El Triunfo",
+          "descripcion": "Escuintla, Chiapas",
+          "imagenes": ["imgObraPublica21.jpg", "imgObraPublica22.jpg"]
+        },
+        {
+          "nombre": "Reconstrucción del Camino Las Salinas - El Bejucal - La Lucha",
+          "descripcion": "Siltepec, Chiapas",
+          "imagenes": ["imgObraPublica23.jpg", "imgObraPublica24.jpg"]
+        },
+        {
+          "nombre": "Trabajos de apoyo parcial inmediato (API)",
+          "descripcion": "Ixtacomitán, Chiapas. Centro SCT Chiapas",
+          "imagenes": ["imgObraPublica25.jpg", "imgObraPublica26.jpg"]
+        }
       ]
     },
     {
       "titulo": "Infraestructura Hospitalaria",
       "descripcion": "Hospitales, equipamiento y centros médicos",
+      "icono": "heart-pulse",
       "proyectos": [
-        "Construcción del Hospital General de 20 Camas Ocosingo, consistente en proyecto, obra y equipamiento. (llave en Mano), Ocosingo, Chis. Seinfra",
-        "Hospital Básico comunitario de 12 Camas, Simojovel, Chis Sopyc",
-        "Construcción y Equipamiento del Hospital Universal de 30 Camas en Reforma, Chis. Sopyc",
-        "Terminación de la Construcción del Hospital General de 30 Camas en el Municipio de Yajalon, Chis. Sopyc"
+        {
+          "nombre": "Construcción del Hospital General de 20 Camas de Ocosingo",
+          "descripcion": "Ocosingo, Chiapas",
+          "imagenes": ["imgObraPublica27.jpg", "imgObraPublica28.jpg", "imgObraPublica29.jpg"]
+        },
+        {
+          "nombre": "Hospital Básico Comunitario de Simojovel",
+          "descripcion": "Simojovel de Allende, del municipio de Simojovel, Chiapas",
+          "imagenes": ["imgObraPublica30.jpg", "imgObraPublica31.jpg"]
+        }
       ]
     },
     {
       "titulo": "Infraestructura Educativa",
       "descripcion": "Universidades, centros deportivos y centros de convivencia",
+      "icono": "graduation-cap",
       "proyectos": [
-        "Creación de la Unidad Académica (UNICACH), consistente en la construcción de dos edificios de tres niveles y obra exterior en Palenque, Chis. INIFECH",
-        "Remodelación del Centro Deportivo Caña Hueca 2ª etapa en Tuxtla Gtz, Chiapas Sopyc",
-        "Construcción del Centro de Convivencia Adultos Mayores en Tuxtla Gutiérrez, Chis INIFECH."
+        {
+          "nombre": "Creación de la Unidad Académica (UNICACH)",
+          "descripcion": "Palenque, Chiapas. INIFECH",
+          "imagenes": ["imgObraPublica32.jpg", "imgObraPublica33.jpg", "imgObraPublica34.jpg"]
+        },
+        {
+          "nombre": "Construcción del Centro de Convivencia Adultos Mayores",
+          "descripcion": "Tuxtla Gutiérrez, del municipio de Tuxtla Gutiérrez, Chiapas",
+          "imagenes": ["imgObraPublica35.jpg", "imgObraPublica36.jpg"]
+        }
       ]
     },
     {
       "titulo": "Infraestructura Penitenciaria",
       "descripcion": "Cárceles, centros de reinserción y rehabilitación",
+      "icono": "shield",
       "proyectos": [
-        "Rehabilitación Estructural de Edificios de Admisión y Gobierno en las instalaciones correspondientes a la cárcel distrital de Motozintla, Chis.",
-        "Construcción de Dormitorios y mejoramiento de instalaciones del Centro Estatal para la reinserción social de Sentenciados No. 7 en la localidad de Huixtla, Chis.",
-        "Construcción de ampliación del Centro de Readaptación Social 14 \"El Amate\" Consistente en 500mt lineales de barda de concreto armado, Torres de Vigilancia y portones en áreas de rondines en la localidad de Lázaro Cárdenas, Cintalapa, Chis, (cabe recalcar que la obra se realizo con el penal en funciones y con parte de mano de obra de los internos del penal)"
+        {
+          "nombre": "Construcción, mejoramiento o ampliación de centros de readaptación social (CERESO 14 El Amate)",
+          "descripcion": "Lázaro Cárdenas, del municipio de Cintalapa, Chiapas",
+          "imagenes": ["imgObraPublica37.jpg", "imgObraPublica38.jpg", "imgObraPublica39.jpg"]
+        },
+        {
+          "nombre": "Centro Estatal para la Reinserción Social de Sentenciados No.7",
+          "descripcion": "Huixtla, Chiapas",
+          "imagenes": ["imgObraPublica40.jpg", "imgObraPublica41.jpg"]
+        }
       ]
     },
     {
       "titulo": "Infraestructura Comercial",
       "descripcion": "Mercados públicos y centros comerciales",
+      "icono": "shopping-cart",
       "proyectos": [
-        "Construcción del Mercado Publico Municipal, consistente en 3 naves, tanque elevado, estacionamiento, patio de maniobras en el municipio La Trinitaria, Chis."
+        {
+          "nombre": "Construcción del Mercado Público Municipal",
+          "descripcion": "La Trinitaria, Chiapas",
+          "imagenes": ["imgObraPublica42.jpg", "imgObraPublica43.jpg", "imgObraPublica44.jpg", "imgObraPublica45.jpg"]
+        }
       ]
     },
     {
       "titulo": "Edificios Públicos",
       "descripcion": "Centros de control, capacitación y edificios gubernamentales",
+      "icono": "building-2",
       "proyectos": [
-        "Remodelación del Centro de Control y Confianza Certificado, Tuxtla Gutiérrez, Chiapas.",
-        "Construcción del Centro de Capacitación para Adultos Mayores en Tuxtla Gutiérrez, Chis INIFECH."
+        {
+          "nombre": "Construcción del Recinto Fiscalizado",
+          "descripcion": "Puerto Chiapas, Municipio de Tapachula, Chiapas",
+          "imagenes": ["imgObraPublica46.jpg", "imgObraPublica47.jpg"]
+        },
+        {
+          "nombre": "Construcción de Rial Academia de la Lengua Fraylescana y Centro Cultural",
+          "descripcion": "Municipio de Villaflores, Chiapas",
+          "imagenes": ["imgObraPublica48.jpg", "imgObraPublica49.jpg", "imgObraPublica50.jpg"]
+        },
+        {
+          "nombre": "Rehabilitación General de Dormitorios del Cuartel General",
+          "descripcion": "Llano San Juan, Ocozocoautla, Chiapas",
+          "imagenes": ["imgObraPublica51.jpg", "imgObraPublica52.jpg"]
+        },
+        {
+          "nombre": "Ejecución de la Obra Casa Club Mejores Menores",
+          "descripcion": "Tapachula de Córdova y Ordoñez, del Municipio de Tapachula, Chiapas",
+          "imagenes": ["imgObraPublica53.jpg", "imgObraPublica54.jpg", "imgObraPublica55.jpg"]
+        },
+        {
+          "nombre": "Aeropuerto Internacional Ángel Albino Corzo",
+          "descripcion": "Francisco Sarabia, Municipio de Chiapa de Corzo, Chiapas",
+          "imagenes": ["imgObraPublica56.jpg", "imgObraPublica57.jpg"]
+        }
       ]
     }
   ],
@@ -88,20 +185,68 @@
     "descripcion": "Nuestro equipo ha demostrado capacidad de liderazgo y gestión en proyectos de gran envergadura, manejando responsabilidades técnicas y administrativas de alto nivel en el sector público.",
     "valores": [
       {
-        "icono": "👨‍💼",
+        "icono": "user-tie",
         "titulo": "Alta Dirección",
         "descripcion": "Cargos gerenciales de alto nivel"
       },
       {
-        "icono": "🔧",
+        "icono": "settings",
         "titulo": "Responsabilidad Técnica",
         "descripcion": "Superintendencias y residencias de obra"
       },
       {
-        "icono": "📋",
+        "icono": "clipboard-list",
         "titulo": "DRO y RTEC",
         "descripcion": "Directores Responsables de Obra"
       }
+    ]
+  },
+  "datosGenerales": {
+    "titulo": "DATOS GENERALES",
+    "informacion": {
+      "razonSocial": "GICRAM CONSTRUCCIONES SA DE CV",
+      "directorGeneral": "RENE G. TRESPALACIOS TORRES",
+      "ciudad": "TUXTLA GUTIERREZ, CHIAPAS",
+      "ubicacion": "CARRETERA INT. Km. 1078 NUM. 353, COL. PLAN DE AYALA CP. 29020",
+      "telefono": "961 11 29990",
+      "rfc": "GCO160630UI6",
+      "repse": "FOLIO 155699",
+      "correo": "trespalaciost@gmail.com"
+    }
+  },
+  "equiposMaquinaria": {
+    "titulo": "EQUIPOS Y MAQUINARIA",
+    "equipos": [
+      "1 Retroexcavadora CAT420D",
+      "1 Retroexcavadora CAT416E",
+      "1 Excavadora CAT320C",
+      "1 Motoconformadora CAT12H",
+      "1 Vibrocompactador Dynapac 12 Ton",
+      "1 Rodillo Wacker 1200Kg",
+      "1 Rodillo New Holland 7 Ton",
+      "6 Bailarinas",
+      "8 Revolvedoras",
+      "1 Martillo retroexcavadora",
+      "1 Camión 3 Ton F350 Súper Duty",
+      "3 Nissan P300",
+      "1 Mitsubishi L200 4x4",
+      "1 Vehículo compacto"
+    ]
+  },
+  "principalesClientes": {
+    "titulo": "PRINCIPALES CLIENTES",
+    "clientes": [
+      "GRUPO NACER GLOBAL",
+      "ICEL UNIVERSIDAD",
+      "CENTRO SCT CHIAPAS",
+      "INFONAVIT",
+      "ISSSTE",
+      "UNIVERSIDAD DEL DESARROLLO PROFESIONAL SC (UNIDEP)",
+      "INSTITUTO EL DISEÑADOR DE LA MODA, SC",
+      "LAMAR MEXICANA AC",
+      "UNIVER",
+      "UNIVERSIDAD EDUCATIVA DE ECATEPEC",
+      "CENTRO DE APRENDIZAJE MONTEVIDEO SC"
     ]
   }
 }
