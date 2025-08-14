@@ -1,8 +1,9 @@
-export { default as Footer } from './Footer';
-export { default as Hero } from './Hero';
+export { default as About } from './About';
 export { default as CreditOptions } from './CreditOptions';
 export { default as Developments } from './Developments';
-export { default as Team } from './Team';
-export { default as About } from './About';
+export { default as Footer } from './Footer';
+export { default as Hero } from './Hero';
 export { default as ObraPrivada } from './ObraPrivada';
-export { default as ObraPublica } from './ObraPublica'; 
+export { default as ObraPublica } from './ObraPublica';
+export { default as Team } from './Team';
+export { default as Comments } from './Comments'; 

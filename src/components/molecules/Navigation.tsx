@@ -58,6 +58,12 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
       action: () => onViewChange('landing', 'team')
     },
     { 
+      name: 'Comentarios', 
+      href: '#comments',
+      hasDropdown: false,
+      action: () => onViewChange('landing', 'comments')
+    },
+    { 
       name: 'Contacto', 
       href: '#contact',
       hasDropdown: false,

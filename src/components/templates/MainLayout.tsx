@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navigation } from '../molecules';
-import { Footer, Hero, CreditOptions, Developments, Team, About, ObraPrivada, ObraPublica } from '../organisms';
+import { Footer, Hero, CreditOptions, Developments, Team, About, ObraPrivada, ObraPublica, Comments } from '../organisms';
 
 type ViewType = 'landing' | 'obra-privada' | 'obra-publica';
 
@@ -36,6 +36,7 @@ const MainLayout: React.FC = () => {
             <Developments onViewChange={handleViewChange} />
             <Team />
             <About />
+            <Comments />
           </>
         );
     }

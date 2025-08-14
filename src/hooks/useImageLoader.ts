@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 interface UseImageLoaderReturn {
   isLoading: boolean;
   hasError: boolean;
-  imageRef: React.RefObject<HTMLImageElement | null>;
+  imageRef: React.RefObject<HTMLImageElement>;
   handleImageLoad: () => void;
   handleImageError: () => void;
 }
