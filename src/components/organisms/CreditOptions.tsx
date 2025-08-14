@@ -6,7 +6,7 @@ import imgCreditoFovissste from '../../assets/images/imgCreditoFovissste.png';
 
 const CreditOptions: React.FC = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gicram-tertiary via-white to-gicram-tertiary">
+    <section id="credits" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gicram-tertiary via-white to-gicram-tertiary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título principal */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">

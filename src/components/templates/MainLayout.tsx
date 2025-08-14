@@ -7,10 +7,19 @@ type ViewType = 'landing' | 'obra-privada' | 'obra-publica';
 const MainLayout: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewType>('landing');
 
-  const handleViewChange = (view: ViewType) => {
+  const handleViewChange = (view: ViewType, section?: string) => {
     setCurrentView(view);
-    // Scroll to top when changing views
-    window.scrollTo(0, 0);
+    
+    if (section) {
+      // Scroll to specific section
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Scroll to top when changing views
+      window.scrollTo(0, 0);
+    }
   };
 
   const renderView = () => {

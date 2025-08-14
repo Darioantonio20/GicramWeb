@@ -6,7 +6,7 @@ import logoGicram from '../../assets/images/gicramLogo2.png';
 type ViewType = 'landing' | 'obra-privada' | 'obra-publica';
 
 interface NavigationProps {
-  onViewChange: (view: ViewType) => void;
+  onViewChange: (view: ViewType, section?: string) => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
@@ -20,7 +20,13 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
       name: 'Inicio', 
       href: '#home',
       hasDropdown: false,
-      action: () => onViewChange('landing')
+      action: () => onViewChange('landing', 'home')
+    },
+    { 
+      name: 'Opciones de Crédito', 
+      href: '#credits',
+      hasDropdown: false,
+      action: () => onViewChange('landing', 'credits')
     },
     { 
       name: 'Desarrollos', 
@@ -43,17 +49,23 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
       name: 'Nosotros', 
       href: '#about',
       hasDropdown: false,
-      action: () => onViewChange('landing')
+      action: () => onViewChange('landing', 'about')
+    },
+    { 
+      name: 'Equipo', 
+      href: '#team',
+      hasDropdown: false,
+      action: () => onViewChange('landing', 'team')
     },
     { 
       name: 'Contacto', 
       href: '#contact',
       hasDropdown: false,
-      action: () => onViewChange('landing')
+      action: () => onViewChange('landing', 'contact')
     }
   ];
 
-  // Filtramos "Desarrollos" para mobile
+  // Filtramos "Desarrollos" para mobile ya que tiene dropdown
   const mobileMenuItems = menuItems.filter(item => item.name !== 'Desarrollos');
 
   const handleItemClick = (item: any) => {
@@ -89,7 +101,7 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
-              onClick={() => onViewChange('landing')}
+              onClick={() => onViewChange('landing', 'home')}
               className="hover:scale-105 transition-transform duration-300"
             >
               <img 

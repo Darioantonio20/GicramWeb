@@ -5,7 +5,7 @@ import ImgBannerMobile from '../../assets/images/imgBannerMobile.jpeg';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-screen bg-gradient-to-br from-gicram-dark to-gicram-secondary flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative w-full h-screen bg-gradient-to-br from-gicram-dark to-gicram-secondary flex items-center justify-center overflow-hidden">
       {/* Imagen de fondo promocional optimizada - Desktop */}
       <div className="absolute inset-0 w-full h-full hidden lg:block">
         <img 

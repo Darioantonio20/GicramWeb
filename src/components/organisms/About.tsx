@@ -4,7 +4,7 @@ import { Target, Eye, Heart, Zap, TrendingUp, Leaf } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-gicram-tertiary via-white to-gicram-tertiary relative overflow-hidden">
+    <section id="about" className="py-20 bg-gradient-to-br from-gicram-tertiary via-white to-gicram-tertiary relative overflow-hidden">
       {/* Elementos decorativos de fondo */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-gicram-primary/20 to-gicram-primary-light/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-gicram-secondary/20 to-gicram-secondary-light/20 rounded-full blur-3xl"></div>
