@@ -27,18 +27,6 @@ const ObraPrivada: React.FC<ObraPrivadaProps> = ({ onBack, selectedProject }) =>
     titulo: "OBRA PRIVADA (fotografías y Renders)",
     descripcion: "En Gicram contribuimos al éxito de nuestros clientes manteniendo un interés constante por establecer alianzas comerciales de largo plazo, asegurando altos estándares de calidad y la generación de soluciones técnico-económicas de alto valor agregado.",
     proyectos: {
-      "Tuxtla Gutiérrez": [
-        {
-          nombre: "Residencia Country La Cima",
-          descripcion: "Residencia privada de alto nivel en exclusivo fraccionamiento con acabados de lujo y diseño arquitectónico moderno",
-          imagenes: ["/images/projects/obraPrivada1.jpg", "/images/projects/obraPrivada2.jpg", "/images/projects/obraPrivada3.jpg"]
-        },
-        {
-          nombre: "Proyecto Oficinas Cowork",
-          descripcion: "Centro de oficinas compartidas con espacios modernos, funcionales y tecnología de vanguardia para empresas innovadoras",
-          imagenes: ["/images/projects/obraPrivada4.jpg", "/images/projects/obraPrivada5.jpg", "/images/projects/obraPrivada6.jpg"]
-        }
-      ],
       "Guadalajara": [
         {
           nombre: "Centro Histórico",

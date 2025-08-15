@@ -31,10 +31,6 @@ const Navigation: React.FC<NavigationProps> = ({ onViewChange }) => {
 
   // Datos de Obra Privada
   const obraPrivadaData = {
-    "Tuxtla Gutiérrez": [
-      "Residencia Country La Cima",
-      "Proyecto Oficinas Cowork"
-    ],
     "Guadalajara": [
       "Centro Histórico",
       "Las Américas",

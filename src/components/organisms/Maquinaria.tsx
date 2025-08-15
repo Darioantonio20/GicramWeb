@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Button } from '../atoms';
-import { Truck, Wrench, HardHat, Cog, Settings, CheckCircle, Clock, Building2, MapPin, Phone, Mail, User, ArrowLeft } from 'lucide-react';
+import { Truck, Wrench, HardHat, Cog, Settings, CheckCircle, Clock, Building2, MapPin, Phone, Mail, ArrowLeft } from 'lucide-react';
 
 interface MaquinariaProps {
   onBack: () => void;
@@ -69,11 +69,9 @@ const Maquinaria: React.FC<MaquinariaProps> = ({ onBack }) => {
 
   const datosGenerales = {
     razonSocial: "GICRAM CONSTRUCCIONES SA DE CV",
-    directorGeneral: "RENE G. TRESPALACIOS TORRES",
     ciudad: "TUXTLA GUTIERREZ, CHIAPAS",
     ubicacion: "CARRETERA INT. Km. 1078 NUM. 353, COL. PLAN DE AYALA CP. 29020",
-    telefono: "961 11 29990",
-    rfc: "GCO160630UI6",
+    telefono: "+529612230369",
     repse: "FOLIO 155699",
     correo: "admongicram@gmail.com"
   };
@@ -134,7 +132,7 @@ const Maquinaria: React.FC<MaquinariaProps> = ({ onBack }) => {
               DATOS GENERALES
             </Text>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Building2 className="w-5 h-5 text-gicram-primary" />
@@ -148,18 +146,6 @@ const Maquinaria: React.FC<MaquinariaProps> = ({ onBack }) => {
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-3">
-                  <User className="w-5 h-5 text-gicram-primary" />
-                  <div>
-                    <Text variant="body" color="gray" className="font-semibold text-gicram-secondary">
-                      Director General
-                    </Text>
-                    <Text variant="body" color="gray" className="text-gicram-secondary-light">
-                      {datosGenerales.directorGeneral}
-                    </Text>
-                  </div>
-                </div>
-
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-gicram-primary" />
                   <div>
@@ -197,7 +183,9 @@ const Maquinaria: React.FC<MaquinariaProps> = ({ onBack }) => {
                     </Text>
                   </div>
                 </div>
+              </div>
 
+              <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-gicram-primary" />
                   <div>
@@ -209,32 +197,17 @@ const Maquinaria: React.FC<MaquinariaProps> = ({ onBack }) => {
                     </Text>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Información adicional */}
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center space-x-3">
-                <Building2 className="w-5 h-5 text-gicram-primary" />
-                <div>
-                  <Text variant="body" color="gray" className="font-semibold text-gicram-secondary">
-                    RFC
-                  </Text>
-                  <Text variant="body" color="gray" className="text-gicram-secondary-light">
-                    {datosGenerales.rfc}
-                  </Text>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Building2 className="w-5 h-5 text-gicram-primary" />
-                <div>
-                  <Text variant="body" color="gray" className="font-semibold text-gicram-secondary">
-                    REPSE
-                  </Text>
-                  <Text variant="body" color="gray" className="text-gicram-secondary-light">
-                    {datosGenerales.repse}
-                  </Text>
+                <div className="flex items-center space-x-3">
+                  <Building2 className="w-5 h-5 text-gicram-primary" />
+                  <div>
+                    <Text variant="body" color="gray" className="font-semibold text-gicram-secondary">
+                      REPSE
+                    </Text>
+                    <Text variant="body" color="gray" className="text-gicram-secondary-light">
+                      {datosGenerales.repse}
+                    </Text>
+                  </div>
                 </div>
               </div>
             </div>
