@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
 import { Navigation } from '../molecules';
-import { Footer, Hero, CreditOptions, Developments, Team, About, ObraPrivada, ObraPublica, Comments } from '../organisms';
+import { Footer, Hero, Developments, Team, About, ObraPrivada, ObraPublica, Comments, Proyectos, Maquinaria } from '../organisms';
 
-type ViewType = 'landing' | 'obra-privada' | 'obra-publica';
+type ViewType = 'landing' | 'obra-privada' | 'obra-publica' | 'maquinaria' | 'proyectos';
+
+interface SelectedProject {
+  category: string;
+  project: string;
+}
 
 const MainLayout: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewType>('landing');
+  const [selectedProject, setSelectedProject] = useState<SelectedProject | null>(null);
 
-  const handleViewChange = (view: ViewType, section?: string) => {
+  const handleViewChange = (view: ViewType, section?: string, project?: SelectedProject) => {
     setCurrentView(view);
+    
+    if (project) {
+      setSelectedProject(project);
+    } else {
+      setSelectedProject(null);
+    }
     
     if (section) {
       // Scroll to specific section
@@ -25,14 +37,17 @@ const MainLayout: React.FC = () => {
   const renderView = () => {
     switch (currentView) {
       case 'obra-privada':
-        return <ObraPrivada onBack={() => handleViewChange('landing')} />;
+        return <ObraPrivada onBack={() => handleViewChange('landing')} selectedProject={selectedProject} />;
       case 'obra-publica':
-        return <ObraPublica onBack={() => handleViewChange('landing')} />;
+        return <ObraPublica onBack={() => handleViewChange('landing')} selectedProject={selectedProject} />;
+      case 'maquinaria':
+        return <Maquinaria onBack={() => handleViewChange('landing')} />;
+      case 'proyectos':
+        return <Proyectos onBack={() => handleViewChange('landing')} />;
       default:
         return (
           <>
             <Hero />
-            <CreditOptions />
             <Developments onViewChange={handleViewChange} />
             <Team />
             <About />

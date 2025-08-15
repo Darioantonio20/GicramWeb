@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative w-full h-screen bg-gradient-to-br from-gicram-dark to-gicram-secondary flex items-center justify-center overflow-hidden">
       {/* Imagen de fondo promocional optimizada - Desktop */}
-      <div className="absolute inset-0 w-full h-full hidden lg:block">
+      <div className="absolute inset-0 w-full h-full hidden lg:block mt-10">
         <img 
           src={ImgBanner} 
           alt="GICRAM - Desarrollador Inmobiliario" 
